@@ -1,0 +1,330 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\responses\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\responses\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\resources\\templates\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\resources\\templates\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\services\\iservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\services\\iservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\vmodel\\vmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\vmodel\\vmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\vmodel\\vmuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\vmodel\\vmuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\web_pizza.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\web_pizza.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\services\\iservices\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\services\\iservices\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\configurations\\jwtconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\configurations\\jwtconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\configurations\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\configurations\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|d:\\asp.net\\pizzastore\\web_pizza\\web_pizza\\entities\\pizzastorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E738B838-DF9C-4BF7-9B27-694DB16D5999}|Web_Pizza\\Web_Pizza.csproj|solutionrelative:web_pizza\\entities\\pizzastorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginResponse.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Responses\\LoginResponse.cs",
+              "RelativeDocumentMoniker": "Web_Pizza\\Responses\\LoginResponse.cs",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Responses\\LoginResponse.cs",
+              "RelativeToolTip": "Web_Pizza\\Responses\\LoginResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T16:05:02.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VMLogin.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\VMODEL\\VMLogin.cs",
+              "RelativeDocumentMoniker": "Web_Pizza\\VMODEL\\VMLogin.cs",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\VMODEL\\VMLogin.cs",
+              "RelativeToolTip": "Web_Pizza\\VMODEL\\VMLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T16:02:38.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Web_Pizza\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Web_Pizza\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-22T17:23:12.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "Web_Pizza\\WeatherForecast.cs",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\WeatherForecast.cs",
+              "RelativeToolTip": "Web_Pizza\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T16:26:23.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Web_Pizza\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Web_Pizza\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T16:26:51.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Web_Pizza.http",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Web_Pizza.http",
+              "RelativeDocumentMoniker": "Web_Pizza\\Web_Pizza.http",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Web_Pizza.http",
+              "RelativeToolTip": "Web_Pizza\\Web_Pizza.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-01-22T16:22:06.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Resources\\Templates\\index.html",
+              "RelativeDocumentMoniker": "Web_Pizza\\Resources\\Templates\\index.html",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Resources\\Templates\\index.html",
+              "RelativeToolTip": "Web_Pizza\\Resources\\Templates\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-01-22T16:21:08.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "Web_Pizza\\Services\\EmailService.cs",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Services\\EmailService.cs",
+              "RelativeToolTip": "Web_Pizza\\Services\\EmailService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAiwBAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T16:07:45.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Services\\IServices\\IEmailService.cs",
+              "RelativeDocumentMoniker": "Web_Pizza\\Services\\IServices\\IEmailService.cs",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Services\\IServices\\IEmailService.cs",
+              "RelativeToolTip": "Web_Pizza\\Services\\IServices\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T16:07:00.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "JwtConfiguration.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Configurations\\JwtConfiguration.cs",
+              "RelativeDocumentMoniker": "Web_Pizza\\Configurations\\JwtConfiguration.cs",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Configurations\\JwtConfiguration.cs",
+              "RelativeToolTip": "Web_Pizza\\Configurations\\JwtConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T16:04:35.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Program.cs",
+              "RelativeDocumentMoniker": "Web_Pizza\\Program.cs",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Program.cs",
+              "RelativeToolTip": "Web_Pizza\\Program.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAD8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T16:03:50.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EmailSettings.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Configurations\\EmailSettings.cs",
+              "RelativeDocumentMoniker": "Web_Pizza\\Configurations\\EmailSettings.cs",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Configurations\\EmailSettings.cs",
+              "RelativeToolTip": "Web_Pizza\\Configurations\\EmailSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T16:03:35.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\appsettings.json",
+              "RelativeDocumentMoniker": "Web_Pizza\\appsettings.json",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\appsettings.json",
+              "RelativeToolTip": "Web_Pizza\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-22T15:55:32.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Web_Pizza\\Services\\UserService.cs",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Services\\UserService.cs",
+              "RelativeToolTip": "Web_Pizza\\Services\\UserService.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAADwv10AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T15:52:36.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VMUser.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\VMODEL\\VMUser.cs",
+              "RelativeDocumentMoniker": "Web_Pizza\\VMODEL\\VMUser.cs",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\VMODEL\\VMUser.cs",
+              "RelativeToolTip": "Web_Pizza\\VMODEL\\VMUser.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAYwBkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T15:51:24.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Services\\IServices\\IUserService.cs",
+              "RelativeDocumentMoniker": "Web_Pizza\\Services\\IServices\\IUserService.cs",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Services\\IServices\\IUserService.cs",
+              "RelativeToolTip": "Web_Pizza\\Services\\IServices\\IUserService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAnwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T15:49:52.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Web_Pizza\\Repositories\\UserRepository.cs",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Web_Pizza\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAArwA8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T15:44:22.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Web_Pizza\\Entities\\User.cs",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Entities\\User.cs",
+              "RelativeToolTip": "Web_Pizza\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T15:35:52.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PizzaStoreContext.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Entities\\PizzaStoreContext.cs",
+              "RelativeDocumentMoniker": "Web_Pizza\\Entities\\PizzaStoreContext.cs",
+              "ToolTip": "D:\\ASP.NET\\PizzaStore\\Web_Pizza\\Web_Pizza\\Entities\\PizzaStoreContext.cs",
+              "RelativeToolTip": "Web_Pizza\\Entities\\PizzaStoreContext.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T15:34:10.903Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
