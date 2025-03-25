@@ -1,0 +1,6 @@
+@WebPizza_API_BackEnd_HostAddress = http://localhost:5189
+
+GET {{WebPizza_API_BackEnd_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

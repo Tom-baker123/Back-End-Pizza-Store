@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\WebPizza_API_BackEnd.props" />
+</Project>
