@@ -21,6 +21,7 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ISizeService, SizeService>();
 builder.Services.AddScoped<IToppingService, ToppingService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 //Cấu hình xác thực email
 
