@@ -13,7 +13,6 @@ namespace WebPizza_API_BackEnd.Entities
         public string Role { get; set; } = "Customer";
         public bool IsActive { get; set; } = false;
         public DateTime CreatedAt { get; set; } = DateTime.Now;
-
         public ICollection<Order> Orders { get; set; }
         public ICollection<Review> Reviews { get; set; }
         // Quan hệ 1-N với Carts

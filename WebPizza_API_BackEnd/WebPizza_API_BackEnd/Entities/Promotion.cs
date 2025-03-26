@@ -10,7 +10,6 @@
         public DateTime EndDate { get; set; }
         public string Status { get; set; } = "Active";
         public DateTime CreatedAt { get; set; } = DateTime.Now;
-
         public ICollection<ProductPromotion> ProductPromotions { get; set; }
     }
 }
