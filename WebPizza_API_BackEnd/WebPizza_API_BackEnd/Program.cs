@@ -18,6 +18,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Đăng ký dịch vụ Service
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 
 //Cấu hình xác thực email
