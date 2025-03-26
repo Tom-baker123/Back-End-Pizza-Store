@@ -31,8 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Helper\" />
-    <Folder Include="MIddleWare\" />
     <Folder Include="Resources\Template\" />
   </ItemGroup>
 
