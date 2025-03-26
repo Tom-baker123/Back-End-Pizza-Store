@@ -33,7 +33,6 @@
   <ItemGroup>
     <Folder Include="Helper\" />
     <Folder Include="MIddleWare\" />
-    <Folder Include="Mapping\" />
     <Folder Include="Resources\Template\" />
   </ItemGroup>
 
