@@ -11,6 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Đọc chuỗi kết nối từ appsettings.json
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
+
+
 // Thêm DbContext vào DI container
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(connectionString));
@@ -69,4 +71,10 @@ app.UseAuthentication(); // 🔥 Bắt buộc phải có nếu dùng JWT
 app.UseAuthorization();
 
 app.MapControllers();
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    context.Database.Migrate(); // Đảm bảo DB cập nhật
+    DbInitializer.SeedData(context); // Gọi seed data
+}
 app.Run();

@@ -488,10 +488,10 @@ D:\GITHUB\Back-End-Pizza-Store\WebPizza_API_BackEnd\WebPizza_API_BackEnd\obj\Deb
 D:\GITHUB\Back-End-Pizza-Store\WebPizza_API_BackEnd\WebPizza_API_BackEnd\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.WebPizza_API_BackEnd.props
 D:\GITHUB\Back-End-Pizza-Store\WebPizza_API_BackEnd\WebPizza_API_BackEnd\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.WebPizza_API_BackEnd.props
 D:\GITHUB\Back-End-Pizza-Store\WebPizza_API_BackEnd\WebPizza_API_BackEnd\obj\Debug\net8.0\staticwebassets.pack.json
-D:\GITHUB\Back-End-Pizza-Store\WebPizza_API_BackEnd\WebPizza_API_BackEnd\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\GITHUB\Back-End-Pizza-Store\WebPizza_API_BackEnd\WebPizza_API_BackEnd\obj\Debug\net8.0\WebPizza.181C5906.Up2Date
 D:\GITHUB\Back-End-Pizza-Store\WebPizza_API_BackEnd\WebPizza_API_BackEnd\obj\Debug\net8.0\WebPizza_API_BackEnd.dll
 D:\GITHUB\Back-End-Pizza-Store\WebPizza_API_BackEnd\WebPizza_API_BackEnd\obj\Debug\net8.0\refint\WebPizza_API_BackEnd.dll
 D:\GITHUB\Back-End-Pizza-Store\WebPizza_API_BackEnd\WebPizza_API_BackEnd\obj\Debug\net8.0\WebPizza_API_BackEnd.pdb
 D:\GITHUB\Back-End-Pizza-Store\WebPizza_API_BackEnd\WebPizza_API_BackEnd\obj\Debug\net8.0\WebPizza_API_BackEnd.genruntimeconfig.cache
 D:\GITHUB\Back-End-Pizza-Store\WebPizza_API_BackEnd\WebPizza_API_BackEnd\obj\Debug\net8.0\ref\WebPizza_API_BackEnd.dll
+D:\GITHUB\Back-End-Pizza-Store\WebPizza_API_BackEnd\WebPizza_API_BackEnd\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
