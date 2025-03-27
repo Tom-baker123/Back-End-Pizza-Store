@@ -3,32 +3,60 @@
   "WorkspaceRootPath": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\migrations\\20250327092705_dbpizzastorev3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\migrations\\20250327092705_dbpizzastorev3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\context\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\context\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\context\\appdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\context\\appdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\service\\iservice\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\service\\iservice\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\mapping\\productmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\mapping\\productmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\vmodel\\productvmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\vmodel\\productvmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\migrations\\20250325065547_pizza_store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\migrations\\20250325065547_pizza_store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\helper\\clouldservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\helper\\clouldservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\middleware\\erronmiddlewarehandel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\middleware\\erronmiddlewarehandel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\service\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\service\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,97 +66,188 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Program.cs",
-              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Program.cs",
-              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Program.cs*",
-              "RelativeToolTip": "WebPizza_API_BackEnd\\Program.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T09:08:56.942Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Service\\ProductService.cs",
-              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Service\\ProductService.cs",
-              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Service\\ProductService.cs*",
-              "RelativeToolTip": "WebPizza_API_BackEnd\\Service\\ProductService.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIQAAAABAAAAAAAAAA==",
+              "Title": "20250327092705_DBPizzaStoreV3.cs",
+              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Migrations\\20250327092705_DBPizzaStoreV3.cs",
+              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Migrations\\20250327092705_DBPizzaStoreV3.cs",
+              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Migrations\\20250327092705_DBPizzaStoreV3.cs",
+              "RelativeToolTip": "WebPizza_API_BackEnd\\Migrations\\20250327092705_DBPizzaStoreV3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T09:08:38.237Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Service\\IService\\IProductService.cs",
-              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Service\\IService\\IProductService.cs",
-              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Service\\IService\\IProductService.cs*",
-              "RelativeToolTip": "WebPizza_API_BackEnd\\Service\\IService\\IProductService.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T09:07:39.594Z",
+              "WhenOpened": "2025-03-27T09:27:09.038Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ProductMapping.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Mapping\\ProductMapping.cs",
-              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Mapping\\ProductMapping.cs",
-              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Mapping\\ProductMapping.cs*",
-              "RelativeToolTip": "WebPizza_API_BackEnd\\Mapping\\ProductMapping.cs*",
-              "ViewState": "AgIAABAAAAAAAAAAAAAwwCEAAAAFAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Program.cs",
+              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Program.cs",
+              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Program.cs",
+              "RelativeToolTip": "WebPizza_API_BackEnd\\Program.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T09:06:29.118Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductVModel.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\VModel\\ProductVModel.cs",
-              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\VModel\\ProductVModel.cs",
-              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\VModel\\ProductVModel.cs*",
-              "RelativeToolTip": "WebPizza_API_BackEnd\\VModel\\ProductVModel.cs*",
-              "ViewState": "AgIAACMAAAAAAAAAAAA6wDQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T09:05:52.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ClouldService.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Helper\\ClouldService.cs",
-              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Helper\\ClouldService.cs",
-              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Helper\\ClouldService.cs",
-              "RelativeToolTip": "WebPizza_API_BackEnd\\Helper\\ClouldService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T09:05:21.556Z",
+              "WhenOpened": "2025-03-27T09:06:35.667Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\appsettings.json",
+              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\appsettings.json",
+              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\appsettings.json",
+              "RelativeToolTip": "WebPizza_API_BackEnd\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-27T09:06:33.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Context\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Context\\DbInitializer.cs",
+              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Context\\DbInitializer.cs",
+              "RelativeToolTip": "WebPizza_API_BackEnd\\Context\\DbInitializer.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAB1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:52:38.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\appsettings.Development.json",
+              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\appsettings.Development.json",
+              "RelativeToolTip": "WebPizza_API_BackEnd\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-27T04:49:53.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Entities\\Payment.cs",
+              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Entities\\Payment.cs",
+              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Entities\\Payment.cs",
+              "RelativeToolTip": "WebPizza_API_BackEnd\\Entities\\Payment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:54:51.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Entities\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Entities\\OrderDetail.cs",
+              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Entities\\OrderDetail.cs",
+              "RelativeToolTip": "WebPizza_API_BackEnd\\Entities\\OrderDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:55:55.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Entities\\Product.cs",
+              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Entities\\Product.cs",
+              "RelativeToolTip": "WebPizza_API_BackEnd\\Entities\\Product.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA4wCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:54:37.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppDbContext .cs",
+              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Context\\AppDbContext .cs",
+              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Context\\AppDbContext .cs",
+              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Context\\AppDbContext .cs",
+              "RelativeToolTip": "WebPizza_API_BackEnd\\Context\\AppDbContext .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:10:32.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Entities\\Category.cs",
+              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Entities\\Category.cs",
+              "RelativeToolTip": "WebPizza_API_BackEnd\\Entities\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:54:27.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20250325065547_Pizza_Store.cs",
+              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Migrations\\20250325065547_Pizza_Store.cs",
+              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Migrations\\20250325065547_Pizza_Store.cs",
+              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Migrations\\20250325065547_Pizza_Store.cs",
+              "RelativeToolTip": "WebPizza_API_BackEnd\\Migrations\\20250325065547_Pizza_Store.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAGkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T04:31:13.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ErronMiddleWareHandel.cs",
               "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\MIddleWare\\ErronMiddleWareHandel.cs",
               "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\MIddleWare\\ErronMiddleWareHandel.cs",
-              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\MIddleWare\\ErronMiddleWareHandel.cs*",
-              "RelativeToolTip": "WebPizza_API_BackEnd\\MIddleWare\\ErronMiddleWareHandel.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\MIddleWare\\ErronMiddleWareHandel.cs",
+              "RelativeToolTip": "WebPizza_API_BackEnd\\MIddleWare\\ErronMiddleWareHandel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-26T09:04:35.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Entities\\User.cs",
+              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Entities\\User.cs",
+              "RelativeToolTip": "WebPizza_API_BackEnd\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T04:24:59.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Service\\EmailService.cs",
+              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Service\\EmailService.cs",
+              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Service\\EmailService.cs",
+              "RelativeToolTip": "WebPizza_API_BackEnd\\Service\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T04:54:22.005Z",
               "EditorCaption": ""
             }
           ]
