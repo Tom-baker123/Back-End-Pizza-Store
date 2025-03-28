@@ -12,7 +12,7 @@ namespace WebPizza_API_BackEnd.Context
         public DbSet<Category> Categories { get; set; }
         public DbSet<Voucher> Vouchers { get; set; }
         public DbSet<Product> Products { get; set; }
-        public DbSet<Size> Sizes { get; set; }
+        public DbSet<PizzaSize> Sizes { get; set; }
         public DbSet<ProductSize> ProductSizes { get; set; }
         public DbSet<Topping> Toppings { get; set; }
         public DbSet<ProductTopping> ProductToppings { get; set; }
@@ -24,6 +24,7 @@ namespace WebPizza_API_BackEnd.Context
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Promotion> Promotions { get; set; }
         public DbSet<ProductPromotion> ProductPromotions { get; set; }
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -44,6 +45,9 @@ namespace WebPizza_API_BackEnd.Context
                 .WithMany(s => s.ProductSizes)
                 .HasForeignKey(ps => ps.SizeID)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<PizzaSize>()
+                .HasKey(p => p.SizeID); // Chỉ định SizeID là primary key
 
             // **Cấu hình bảng ProductToppings (Nhiều-Nhiều giữa Product và Topping)**
             modelBuilder.Entity<ProductTopping>()
@@ -162,6 +166,7 @@ namespace WebPizza_API_BackEnd.Context
                 .WithMany(p => p.Carts)
                 .HasForeignKey(c => c.ProductID)
                 .OnDelete(DeleteBehavior.Cascade);
+           
         }
     }
 }

@@ -121,7 +121,7 @@
   },
   {
     "ContainingType": "WebPizza_API_BackEnd.Controllers.CategoryController",
-    "Method": "GetbyId",
+    "Method": "GetById",
     "RelativePath": "api/Category/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -154,13 +154,13 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "model",
-        "Type": "WebPizza_API_BackEnd.VModel.CategoryUpdateVModel",
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       },
       {
-        "Name": "id",
-        "Type": "",
+        "Name": "model",
+        "Type": "WebPizza_API_BackEnd.VModel.CategoryUpdate",
         "IsRequired": true
       }
     ],
@@ -201,6 +201,105 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "WebPizza_API_BackEnd.Controllers.ProductController",
+    "Method": "GetAll",
+    "RelativePath": "api/Product",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "WebPizza_API_BackEnd.Common.Models.PaginationModel\u00601[[WebPizza_API_BackEnd.ViewModels.ProductGetVModel, WebPizza_API_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebPizza_API_BackEnd.Controllers.ProductController",
+    "Method": "Create",
+    "RelativePath": "api/Product",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "WebPizza_API_BackEnd.ViewModels.ProductCreateVModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebPizza_API_BackEnd.Controllers.ProductController",
+    "Method": "GetById",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebPizza_API_BackEnd.ViewModels.ProductGetVModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebPizza_API_BackEnd.Controllers.ProductController",
+    "Method": "Update",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "WebPizza_API_BackEnd.ViewModels.ProductUpdateVModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebPizza_API_BackEnd.Controllers.ProductController",
+    "Method": "Delete",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "WebPizza_API_BackEnd.Controllers.SizeController",

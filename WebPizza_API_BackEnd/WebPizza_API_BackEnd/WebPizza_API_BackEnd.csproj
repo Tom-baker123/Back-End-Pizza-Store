@@ -31,7 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repository\" />
     <Folder Include="Resources\Template\" />
   </ItemGroup>
 

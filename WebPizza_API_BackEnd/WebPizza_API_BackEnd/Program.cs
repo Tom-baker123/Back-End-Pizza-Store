@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using WebPizza_API_BackEnd.Context;
+using WebPizza_API_BackEnd.Repository;
+using WebPizza_API_BackEnd.Repository.InterfaceRepo;
 using WebPizza_API_BackEnd.Service;
 using WebPizza_API_BackEnd.Service.IService;
 
@@ -24,7 +26,10 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ISizeService, SizeService>();
 builder.Services.AddScoped<IToppingService, ToppingService>();
 builder.Services.AddScoped<IProductService, ProductService>();
-
+// Đăng lớp Repository
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IProductRepo, ProductRepository>();
+builder.Services.AddScoped<ISizeRepo, SizeRepository>();
 //Cấu hình xác thực email
 
 
@@ -71,10 +76,10 @@ app.UseAuthentication(); // 🔥 Bắt buộc phải có nếu dùng JWT
 app.UseAuthorization();
 
 app.MapControllers();
-using (var scope = app.Services.CreateScope())
-{
-    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    context.Database.Migrate(); // Đảm bảo DB cập nhật
-    DbInitializer.SeedData(context); // Gọi seed data
-}
+//using (var scope = app.Services.CreateScope())
+//{
+//    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+//    context.Database.Migrate(); // Đảm bảo DB cập nhật
+//    DbInitializer.SeedData(context); // Gọi seed data
+//}
 app.Run();

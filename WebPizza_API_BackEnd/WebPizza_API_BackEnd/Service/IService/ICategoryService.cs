@@ -10,7 +10,7 @@ namespace WebPizza_API_BackEnd.Service.IService
         Task<ActionResult<PaginationModel<CategoryGetVModel>>> GetAll();
         Task<ActionResult<CategoryGetVModel>?> GetbyId(int id);
         Task<ResponseResult> Create(CategoryCreateVModel model);
-        Task<ResponseResult> Update(CategoryUpdateVModel model);
+        Task<ResponseResult> Update(int id, CategoryUpdate model);
         Task<ResponseResult> Remove(int id);
     }
 }

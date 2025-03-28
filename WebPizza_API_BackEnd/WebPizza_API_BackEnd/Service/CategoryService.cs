@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using OA.Domain.Common.Models;
 using WebPizza_API_BackEnd.Common.Models;
-using WebPizza_API_BackEnd.Context;
 using WebPizza_API_BackEnd.Entities;
 using WebPizza_API_BackEnd.Mapping;
+using WebPizza_API_BackEnd.Repository;
 using WebPizza_API_BackEnd.Service.IService;
 using WebPizza_API_BackEnd.VModel;
 
@@ -12,15 +11,18 @@ namespace WebPizza_API_BackEnd.Service
 {
     public class CategoryService : ICategoryService
     {
-        private readonly AppDbContext _context;
-        public CategoryService(AppDbContext context)
+        private readonly ICategoryRepository _categoryRepository;
+
+        public CategoryService(ICategoryRepository categoryRepository)
         {
-            _context = context;
+            _categoryRepository = categoryRepository;
         }
+
         public async Task<ActionResult<PaginationModel<CategoryGetVModel>>> GetAll()
         {
-            var ds = await _context.Categories.OrderByDescending(c => c.CategoryID)
-                .Select(x=>CategoryMappings.EntityToVModel(x)).ToListAsync();
+            var categories = await _categoryRepository.GetAllAsync();
+            var ds = categories.Select(CategoryMappings.EntityToVModel).ToList();
+
             return new PaginationModel<CategoryGetVModel>
             {
                 Records = ds,
@@ -30,24 +32,17 @@ namespace WebPizza_API_BackEnd.Service
 
         public async Task<ActionResult<CategoryGetVModel>?> GetbyId(int id)
         {
-            var category = await _context.Categories.FindAsync(id);
-            if(category == null)
-            {
-                return null;
-            }
-            return CategoryMappings.EntityToVModel(category);
+            var category = await _categoryRepository.GetByIdAsync(id);
+            return category == null ? null : CategoryMappings.EntityToVModel(category);
         }
 
         public async Task<ResponseResult> Create(CategoryCreateVModel model)
         {
-            var response= new ResponseResult();
             try
             {
                 var category = CategoryMappings.CreateVModelToEntity(model);
-                _context.Categories.Add(category);
-                await _context.SaveChangesAsync();
-                response = new SuccessResponseResult(model, "Tạo danh mục thành công");
-                return response;
+                await _categoryRepository.AddAsync(category);
+                return new SuccessResponseResult(model, "Tạo danh mục thành công");
             }
             catch (Exception ex)
             {
@@ -55,20 +50,20 @@ namespace WebPizza_API_BackEnd.Service
             }
         }
 
-        public async Task<ResponseResult> Update(CategoryUpdateVModel model)
+        public async Task<ResponseResult> Update(int id, CategoryUpdate model)
         {
-            var response = new ResponseResult();
-            try 
-            { 
-                var category = await _context.Categories.FindAsync(model.CategoryId);
-                if(category == null)
+            try
+            {
+                var category = await _categoryRepository.GetByIdAsync(id); // Dùng id từ tham số
+                if (category == null)
                 {
                     return new ErrorResponseResult("Không tìm thấy danh mục");
                 }
-                category.CategoryName = model.CategoryName;
-                await _context.SaveChangesAsync();
-                response = new SuccessResponseResult(category, "Cập nhật danh mục thành công");
-                return response;
+
+                category.CategoryName = model.CategoryName; // Chỉ cập nhật tên
+                await _categoryRepository.UpdateAsync(category);
+
+                return new SuccessResponseResult(category, "Cập nhật danh mục thành công");
             }
             catch (Exception ex)
             {
@@ -78,13 +73,13 @@ namespace WebPizza_API_BackEnd.Service
 
         public async Task<ResponseResult> Remove(int id)
         {
-            var category = await _context.Categories.FindAsync(id);
-            if(category == null)
+            var category = await _categoryRepository.GetByIdAsync(id);
+            if (category == null)
             {
                 return new ErrorResponseResult("Không tìm thấy danh mục");
             }
-            _context.Categories.Remove(category);
-            await _context.SaveChangesAsync();
+
+            await _categoryRepository.DeleteAsync(category);
             return new SuccessResponseResult("Xóa danh mục thành công");
         }
     }

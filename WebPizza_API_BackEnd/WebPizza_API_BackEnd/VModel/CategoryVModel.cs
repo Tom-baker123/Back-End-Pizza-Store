@@ -20,5 +20,9 @@ namespace WebPizza_API_BackEnd.VModel
         public int PageSize { get; set; } = Numbers.Pagination.DefaultPageSize;
         public int PageNumber { get; set; } = Numbers.Pagination.DefaultPageNumber;
     }
+    public class CategoryUpdate
+    {
+        public required string CategoryName { get; set; }
+    }
 }
     
