@@ -1,6 +1,6 @@
 ﻿namespace WebPizza_API_BackEnd.Entities
 {
-    public class Size
+    public class PizzaSize
     {
         public int SizeID { get; set; }
         public string Name { get; set; } = string.Empty;

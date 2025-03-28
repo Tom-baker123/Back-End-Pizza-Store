@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using OA.Domain.Common.Models;
 using WebPizza_API_BackEnd.Common.Models;
 using WebPizza_API_BackEnd.Service.IService;
@@ -22,36 +21,51 @@ namespace WebPizza_API_BackEnd.Controllers
         public async Task<ActionResult<PaginationModel<CategoryGetVModel>>> GetAll()
         {
             var results = await _categoryService.GetAll();
-            return results;
+            return Ok(results);
         }
+
         [HttpGet("{id}")]
-        public async Task<ActionResult<CategoryGetVModel>?> GetbyId(int id)
+        public async Task<ActionResult<CategoryGetVModel>> GetById(int id)
         {
             var result = await _categoryService.GetbyId(id);
             if (result == null)
             {
-                return NotFound();
+                return NotFound(new ErrorResponseResult("Không tìm thấy danh mục"));
             }
-            return result;
+            return Ok(result);
         }
+
         [HttpPost]
-        public async Task<ResponseResult> Create(CategoryCreateVModel model)
+        public async Task<ActionResult<ResponseResult>> Create([FromBody] CategoryCreateVModel model)
         {
+            if (model == null)
+            {
+                return BadRequest(new ErrorResponseResult("Dữ liệu không hợp lệ"));
+            }
+
             var result = await _categoryService.Create(model);
-            return result;
+            if (result is ErrorResponseResult)
+            {
+                return BadRequest(result);
+            }
+            return CreatedAtAction(nameof(GetById), new { id = model.CategoryName }, result);
         }
 
         [HttpPut("{id}")]
-        public async Task<ResponseResult> Update(CategoryUpdateVModel model)
+        public async Task<ResponseResult> Update(int id, [FromBody] CategoryUpdate model)
         {
-            var result = await _categoryService.Update(model);
-            return result;
+            return await _categoryService.Update(id, model);
         }
+
         [HttpDelete("{id}")]
-        public async Task<ResponseResult> Remove(int id)
+        public async Task<ActionResult<ResponseResult>> Remove(int id)
         {
             var result = await _categoryService.Remove(id);
-            return result;
+            if (result is ErrorResponseResult)
+            {
+                return NotFound(result);
+            }
+            return Ok(result);
         }
     }
 }

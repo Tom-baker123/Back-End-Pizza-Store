@@ -17,6 +17,8 @@ namespace WebPizza_API_BackEnd.Entities
         public ICollection<Review> Reviews { get; set; }
         // Quan hệ 1-N với Carts
         public ICollection<Cart> Carts { get; set; } = new List<Cart>();
+     
+
     }
 }
     

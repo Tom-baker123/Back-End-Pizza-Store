@@ -12,8 +12,8 @@ using WebPizza_API_BackEnd.Context;
 namespace WebPizza_API_BackEnd.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250325065547_Pizza_Store")]
-    partial class Pizza_Store
+    [Migration("20250328034816_DBPizzaStoreV5")]
+    partial class DBPizzaStoreV5
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -199,7 +199,6 @@ namespace WebPizza_API_BackEnd.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageURL")

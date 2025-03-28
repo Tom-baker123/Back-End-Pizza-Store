@@ -5,7 +5,7 @@ namespace WebPizza_API_BackEnd.Mapping
 {
     public static class SizeMappings
     {
-        public static SizeGetVModel EntityToVModel(Size size)
+        public static SizeGetVModel EntityToVModel(PizzaSize size)
         {
             return new SizeGetVModel
             {
@@ -14,18 +14,18 @@ namespace WebPizza_API_BackEnd.Mapping
                 AdditionalPrice = size.AdditionalPrice,
             };
         }
-        public static Size VModelToEntity(SizeGetVModel sizeVModel)
+        public static PizzaSize VModelToEntity(SizeGetVModel sizeVModel)
         {
-            return new Size
+            return new PizzaSize
             {
                 SizeID = sizeVModel.SizeID,
                 Name = sizeVModel.Name,
                 AdditionalPrice = sizeVModel.AdditionalPrice,
             };
         }
-        public static Size CreateVModelToEntity(SizeCreateVModel vModel)
+        public static PizzaSize CreateVModelToEntity(SizeCreateVModel vModel)
         {
-            return new Size
+            return new PizzaSize
             {
                 Name = vModel.Name,
                 AdditionalPrice = vModel.AdditionalPrice,
