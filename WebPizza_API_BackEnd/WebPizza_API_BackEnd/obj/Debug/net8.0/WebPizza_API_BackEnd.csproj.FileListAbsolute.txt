@@ -494,3 +494,4 @@ D:\GITHUB\Back-End-Pizza-Store\WebPizza_API_BackEnd\WebPizza_API_BackEnd\obj\Deb
 D:\GITHUB\Back-End-Pizza-Store\WebPizza_API_BackEnd\WebPizza_API_BackEnd\obj\Debug\net8.0\WebPizza_API_BackEnd.pdb
 D:\GITHUB\Back-End-Pizza-Store\WebPizza_API_BackEnd\WebPizza_API_BackEnd\obj\Debug\net8.0\WebPizza_API_BackEnd.genruntimeconfig.cache
 D:\GITHUB\Back-End-Pizza-Store\WebPizza_API_BackEnd\WebPizza_API_BackEnd\obj\Debug\net8.0\ref\WebPizza_API_BackEnd.dll
+D:\Github\Back-End-Pizza-Store\WebPizza_API_BackEnd\WebPizza_API_BackEnd\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

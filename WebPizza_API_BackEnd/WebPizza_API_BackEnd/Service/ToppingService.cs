@@ -4,6 +4,8 @@ using OA.Domain.Common.Models;
 using WebPizza_API_BackEnd.Common.Models;
 using WebPizza_API_BackEnd.Context;
 using WebPizza_API_BackEnd.Mapping;
+using WebPizza_API_BackEnd.Repository;
+using WebPizza_API_BackEnd.Repository.InterfaceRepo;
 using WebPizza_API_BackEnd.Service.IService;
 using WebPizza_API_BackEnd.VModel;
 
@@ -11,22 +13,19 @@ namespace WebPizza_API_BackEnd.Service
 {
     public class ToppingService : IToppingService
     {
-        private readonly AppDbContext _context;
-        public ToppingService(AppDbContext context)
+        private readonly ITopingRepo _topingRepo;
+        public ToppingService(ITopingRepo topingRepo)
         {
-            _context = context;
+            _topingRepo = topingRepo;
         }
 
         public async Task<ActionResult<ResponseResult>> Create(ToppingCreateVModel model)
         {
-            var response = new ResponseResult();
             try
             {
                 var topping = ToppingMappngs.CreateVModelToEntity(model);
-                _context.Toppings.Add(topping);
-                await _context.SaveChangesAsync();
-                response = new SuccessResponseResult(model, "Tạo topping thành công");
-                return response;
+                await _topingRepo.AddAsync(topping);
+                return new SuccessResponseResult(model, "Tạo topping thành công");
             }
             catch (Exception ex)
             {
@@ -39,13 +38,12 @@ namespace WebPizza_API_BackEnd.Service
             var response = new ResponseResult();
             try
             {
-                var topping = await _context.Toppings.FindAsync(id);
+                var topping = await _topingRepo.GetByIdAsync(id);
                 if (topping == null)
                 {
                     return new ErrorResponseResult("Không tìm thấy size");
                 }
-                _context.Toppings.Remove(topping);
-                await _context.SaveChangesAsync();
+                await _topingRepo.DeleteAsync(topping);
                 response = new SuccessResponseResult(topping, "Xóa topping thành công");
                 return response;
             }
@@ -57,18 +55,19 @@ namespace WebPizza_API_BackEnd.Service
 
         public async Task<ActionResult<PaginationModel<ToppingGetVModel>>> GetAll()
         {
-            var ds = await _context.Toppings.OrderByDescending(c => c.ToppingID)
-                .Select(x => ToppingMappngs.EntityToVModel(x)).ToListAsync();
+            var toppings = await _topingRepo.GetAllAsync();
+            var toppingViewModels = toppings.Select(x => ToppingMappngs.EntityToVModel(x)).ToList();
+
             return new PaginationModel<ToppingGetVModel>
             {
-                Records = ds,
-                TotalRecords = ds.Count
+                Records = toppingViewModels,
+                TotalRecords = toppingViewModels.Count
             };
         }
 
         public async Task<ActionResult<ToppingGetVModel>?> GetbyId(int id)
         {
-            var topping = await _context.Toppings.FindAsync(id);
+            var topping = await _topingRepo.GetByIdAsync(id);
             if (topping == null)
             {
                 return null;
@@ -81,15 +80,15 @@ namespace WebPizza_API_BackEnd.Service
             var response = new ResponseResult();
             try
             {
-                var size = await _context.Toppings.FindAsync(model.ToppingID);
-                if (size == null)
+                var topping = await _topingRepo.GetByIdAsync(model.ToppingID);
+                if (topping == null)
                 {
                     return new ErrorResponseResult("Không tìm thấy size");
                 }
-                size.Name = model.Name;
-                size.Price = model.Price;
-                await _context.SaveChangesAsync();
-                response = new SuccessResponseResult(size, "Cập nhật topping thành công");
+                topping.Name = model.Name;
+                topping.Price = model.Price;
+                await _topingRepo.UpdateAsync(topping);
+                response = new SuccessResponseResult(topping, "Cập nhật topping thành công");
                 return response;
             }
             catch (Exception ex)

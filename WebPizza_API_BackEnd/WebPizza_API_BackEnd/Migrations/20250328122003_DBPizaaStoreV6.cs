@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace WebPizza_API_BackEnd.Migrations
 {
     /// <inheritdoc />
-    public partial class DBPizzaStoreV5 : Migration
+    public partial class DBPizaaStoreV6 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
