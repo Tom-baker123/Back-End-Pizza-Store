@@ -30,6 +30,7 @@ builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepo, ProductRepository>();
 builder.Services.AddScoped<ISizeRepo, SizeRepository>();
+builder.Services.AddScoped<ITopingRepo, ToppingRepository>();
 //Cấu hình xác thực email
 
 

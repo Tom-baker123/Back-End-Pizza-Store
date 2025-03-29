@@ -12,8 +12,8 @@ using WebPizza_API_BackEnd.Context;
 namespace WebPizza_API_BackEnd.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250328034816_DBPizzaStoreV5")]
-    partial class DBPizzaStoreV5
+    [Migration("20250328122003_DBPizaaStoreV6")]
+    partial class DBPizaaStoreV6
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -184,6 +184,26 @@ namespace WebPizza_API_BackEnd.Migrations
                     b.ToTable("Payments");
                 });
 
+            modelBuilder.Entity("WebPizza_API_BackEnd.Entities.PizzaSize", b =>
+                {
+                    b.Property<int>("SizeID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SizeID"));
+
+                    b.Property<decimal>("AdditionalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("SizeID");
+
+                    b.ToTable("Sizes");
+                });
+
             modelBuilder.Entity("WebPizza_API_BackEnd.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -335,26 +355,6 @@ namespace WebPizza_API_BackEnd.Migrations
                     b.HasIndex("UserID");
 
                     b.ToTable("Reviews");
-                });
-
-            modelBuilder.Entity("WebPizza_API_BackEnd.Entities.Size", b =>
-                {
-                    b.Property<int>("SizeID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SizeID"));
-
-                    b.Property<decimal>("AdditionalPrice")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("SizeID");
-
-                    b.ToTable("Sizes");
                 });
 
             modelBuilder.Entity("WebPizza_API_BackEnd.Entities.Topping", b =>
@@ -572,7 +572,7 @@ namespace WebPizza_API_BackEnd.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WebPizza_API_BackEnd.Entities.Size", "Size")
+                    b.HasOne("WebPizza_API_BackEnd.Entities.PizzaSize", "Size")
                         .WithMany("ProductSizes")
                         .HasForeignKey("SizeID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -639,6 +639,11 @@ namespace WebPizza_API_BackEnd.Migrations
                     b.Navigation("OrderToppings");
                 });
 
+            modelBuilder.Entity("WebPizza_API_BackEnd.Entities.PizzaSize", b =>
+                {
+                    b.Navigation("ProductSizes");
+                });
+
             modelBuilder.Entity("WebPizza_API_BackEnd.Entities.Product", b =>
                 {
                     b.Navigation("Carts");
@@ -657,11 +662,6 @@ namespace WebPizza_API_BackEnd.Migrations
             modelBuilder.Entity("WebPizza_API_BackEnd.Entities.Promotion", b =>
                 {
                     b.Navigation("ProductPromotions");
-                });
-
-            modelBuilder.Entity("WebPizza_API_BackEnd.Entities.Size", b =>
-                {
-                    b.Navigation("ProductSizes");
                 });
 
             modelBuilder.Entity("WebPizza_API_BackEnd.Entities.Topping", b =>
