@@ -9,6 +9,17 @@ using WebPizza_API_BackEnd.Service;
 using WebPizza_API_BackEnd.Service.IService;
 
 var builder = WebApplication.CreateBuilder(args);
+//cors
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});//
 
 // Đọc chuỗi kết nối từ appsettings.json
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -71,7 +82,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors("AllowAll"); 
 app.UseHttpsRedirection();
 app.UseAuthentication(); // 🔥 Bắt buộc phải có nếu dùng JWT
 app.UseAuthorization();
