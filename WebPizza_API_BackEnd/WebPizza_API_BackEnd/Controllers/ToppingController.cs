@@ -18,9 +18,9 @@ namespace WebPizza_API_BackEnd.Controllers
             _toppingService = toppingService;
         }
         [HttpGet]
-        public async Task<ActionResult<PaginationModel<ToppingGetVModel>>> GetAll()
+        public async Task<ActionResult<PaginationModel<ToppingGetVModel>>> GetAll([FromQuery]ToppingFilterParams parameters)
         {
-            var results = await _toppingService.GetAll();
+            var results = await _toppingService.GetAll(parameters);
             return results;
         }
         [HttpGet("{id}")]

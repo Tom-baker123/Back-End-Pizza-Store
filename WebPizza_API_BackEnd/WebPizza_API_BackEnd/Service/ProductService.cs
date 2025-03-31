@@ -2,10 +2,12 @@
 using OA.Domain.Common.Models;
 using WebPizza_API_BackEnd.Common.Models;
 using WebPizza_API_BackEnd.Entities;
+using WebPizza_API_BackEnd.Mapping;
 using WebPizza_API_BackEnd.Repository;
 using WebPizza_API_BackEnd.Repository.InterfaceRepo;
 using WebPizza_API_BackEnd.Service.IService;
 using WebPizza_API_BackEnd.ViewModels;
+using WebPizza_API_BackEnd.VModel;
 
 namespace WebPizza_API_BackEnd.Service
 {
@@ -18,24 +20,17 @@ namespace WebPizza_API_BackEnd.Service
             _productRepository = productRepository;
         }
 
-        public async Task<ActionResult<PaginationModel<ProductGetVModel>>> GetAll()
+        public async Task<ActionResult<PaginationModel<ProductGetVModel>>> GetAll(ProductFilterParams parameters)
         {
             var products = await _productRepository.GetAllAsync();
 
-            var productViewModels = products.Select(p => new ProductGetVModel
-            {
-                Id = p.Id,
-                Name = p.Name,
-                Description = p.Description,
-                Price = p.Price,
-                CategoryID = p.CategoryID,
-                ImageURL = p.ImageURL
-            }).ToList();
+            var ds = products.Skip((parameters.PageNumber - 1) * parameters.PageSize)
+                .Take(parameters.PageSize).Select(x => ProductMapper.EntityToVModel(x)).ToList();
 
             return new PaginationModel<ProductGetVModel>
             {
-                Records = productViewModels,
-                TotalRecords = productViewModels.Count
+                Records = ds,
+                TotalRecords = ds.Count
             };
         }
 
@@ -54,6 +49,7 @@ namespace WebPizza_API_BackEnd.Service
                 Description = product.Description,
                 Price = product.Price,
                 CategoryID = product.CategoryID,
+                CategoryName = product.Category?.CategoryName,
                 ImageURL = product.ImageURL
             };
         }

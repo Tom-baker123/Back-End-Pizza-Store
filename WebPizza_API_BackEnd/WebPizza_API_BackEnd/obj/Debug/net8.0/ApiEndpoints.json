@@ -80,7 +80,18 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "WebPizza_API_BackEnd.Common.Models.PaginationModel\u00601[[WebPizza_API_BackEnd.VModel.CategoryGetVModel, WebPizza_API_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
@@ -209,7 +220,18 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "WebPizza_API_BackEnd.Common.Models.PaginationModel\u00601[[WebPizza_API_BackEnd.ViewModels.ProductGetVModel, WebPizza_API_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
@@ -437,7 +459,18 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "WebPizza_API_BackEnd.Common.Models.PaginationModel\u00601[[WebPizza_API_BackEnd.VModel.ToppingGetVModel, WebPizza_API_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",

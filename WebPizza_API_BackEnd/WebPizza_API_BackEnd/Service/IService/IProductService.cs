@@ -7,7 +7,7 @@ namespace WebPizza_API_BackEnd.Service.IService
 {
     public interface IProductService
     {
-        Task<ActionResult<PaginationModel<ProductGetVModel>>> GetAll();
+        Task<ActionResult<PaginationModel<ProductGetVModel>>> GetAll(ProductFilterParams parameters);
         Task<ActionResult<ProductGetVModel>?> GetById(int id);
         Task<ResponseResult> Create(ProductCreateVModel model);
         Task<ResponseResult> Update(int id, ProductUpdateVModel model);

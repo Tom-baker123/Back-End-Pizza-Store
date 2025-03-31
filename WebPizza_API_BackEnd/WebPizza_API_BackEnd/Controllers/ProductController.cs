@@ -20,10 +20,10 @@ namespace WebPizza_API_BackEnd.Controllers
 
         // GET: api/product
         [HttpGet]
-        public async Task<ActionResult<PaginationModel<ProductGetVModel>>> GetAll()
+        public async Task<ActionResult<PaginationModel<ProductGetVModel>>> GetAll([FromQuery]ProductFilterParams parameters)
         {
-            var result = await _productService.GetAll();
-            return Ok(result);
+            var result = await _productService.GetAll(parameters);
+            return result;
         }
 
         // GET: api/product/5
@@ -35,7 +35,7 @@ namespace WebPizza_API_BackEnd.Controllers
             {
                 return NotFound();
             }
-            return Ok(result);
+            return result;
         }
 
         // POST: api/product
