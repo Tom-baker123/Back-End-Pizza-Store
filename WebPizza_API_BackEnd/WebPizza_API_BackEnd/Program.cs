@@ -37,11 +37,13 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ISizeService, SizeService>();
 builder.Services.AddScoped<IToppingService, ToppingService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IPromotionService,PromotionService>();
 // Đăng lớp Repository
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepo, ProductRepository>();
 builder.Services.AddScoped<ISizeRepo, SizeRepository>();
 builder.Services.AddScoped<ITopingRepo, ToppingRepository>();
+builder.Services.AddScoped<IPromotionRepo, PromotionRepository>();
 //Cấu hình xác thực email
 
 
