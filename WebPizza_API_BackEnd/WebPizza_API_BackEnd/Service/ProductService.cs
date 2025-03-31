@@ -18,7 +18,8 @@ namespace WebPizza_API_BackEnd.Service
             _productRepository = productRepository;
         }
 
-        public async Task<ActionResult<PaginationModel<ProductGetVModel>>> GetAll()
+        public async Task<ActionResult<PaginationModel<ProductGetVModel>>> GetAll(ProductFilterParams parameters)
+
         {
             var products = await _productRepository.GetAllAsync();
 

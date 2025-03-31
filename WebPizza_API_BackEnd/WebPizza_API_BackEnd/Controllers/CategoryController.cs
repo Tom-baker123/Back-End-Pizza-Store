@@ -18,9 +18,9 @@ namespace WebPizza_API_BackEnd.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<PaginationModel<CategoryGetVModel>>> GetAll()
+        public async Task<ActionResult<PaginationModel<CategoryGetVModel>>> GetAll([FromQuery] CategoryFilterParams parameters)
         {
-            var results = await _categoryService.GetAll();
+            var results = await _categoryService.GetAll(parameters);
             return Ok(results);
         }
 
