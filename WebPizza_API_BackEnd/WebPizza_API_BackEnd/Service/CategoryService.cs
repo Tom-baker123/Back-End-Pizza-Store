@@ -18,7 +18,7 @@ namespace WebPizza_API_BackEnd.Service
             _categoryRepository = categoryRepository;
         }
 
-        public async Task<ActionResult<PaginationModel<CategoryGetVModel>>> GetAll()
+        public async Task<ActionResult<PaginationModel<CategoryGetVModel>>> GetAll(CategoryFilterParams parameters)
         {
             var categories = await _categoryRepository.GetAllAsync();
             var ds = categories.Select(CategoryMappings.EntityToVModel).ToList();

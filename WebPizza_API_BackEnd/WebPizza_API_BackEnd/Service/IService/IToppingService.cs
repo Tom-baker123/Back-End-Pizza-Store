@@ -7,7 +7,7 @@ namespace WebPizza_API_BackEnd.Service.IService
 {
     public interface IToppingService
     {
-        Task <ActionResult<PaginationModel<ToppingGetVModel>>> GetAll();
+        Task <ActionResult<PaginationModel<ToppingGetVModel>>> GetAll(ToppingFilterParams parameters);
         Task<ActionResult<ToppingGetVModel>?> GetbyId(int id);
         Task <ActionResult<ResponseResult>> Create(ToppingCreateVModel model);
         Task<ActionResult<ResponseResult>> Update(ToppingUpdateVModel model);

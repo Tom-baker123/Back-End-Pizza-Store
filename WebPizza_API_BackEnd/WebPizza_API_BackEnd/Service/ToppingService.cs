@@ -53,7 +53,7 @@ namespace WebPizza_API_BackEnd.Service
             }
         }
 
-        public async Task<ActionResult<PaginationModel<ToppingGetVModel>>> GetAll()
+        public async Task<ActionResult<PaginationModel<ToppingGetVModel>>>  GetAll(ToppingFilterParams parameters)
         {
             var toppings = await _topingRepo.GetAllAsync();
             var toppingViewModels = toppings.Select(x => ToppingMappngs.EntityToVModel(x)).ToList();
