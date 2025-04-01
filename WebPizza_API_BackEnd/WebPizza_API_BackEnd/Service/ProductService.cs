@@ -24,20 +24,13 @@ namespace WebPizza_API_BackEnd.Service
         {
             var products = await _productRepository.GetAllAsync();
 
-            var productViewModels = products.Select(p => new ProductGetVModel
-            {
-                Id = p.Id,
-                Name = p.Name,
-                Description = p.Description,
-                Price = p.Price,
-                CategoryID = p.CategoryID,
-                ImageURL = p.ImageURL
-            }).ToList();
+            var ds = products.Skip((parameters.PageNumber - 1) * parameters.PageSize)
+                 .Take(parameters.PageSize).Select(x => ProductMapper.EntityToVModel(x)).ToList();
 
             return new PaginationModel<ProductGetVModel>
             {
-                Records = productViewModels,
-                TotalRecords = productViewModels.Count
+                 Records = ds,
+                TotalRecords = ds.Count
             };
         }
 

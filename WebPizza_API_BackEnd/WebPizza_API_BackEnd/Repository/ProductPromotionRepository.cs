@@ -1,33 +1,51 @@
-﻿using WebPizza_API_BackEnd.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using WebPizza_API_BackEnd.Context;
+using WebPizza_API_BackEnd.Entities;
 using WebPizza_API_BackEnd.Repository.InterfaceRepo;
 
 namespace WebPizza_API_BackEnd.Repository
 {
     public class ProductPromotionRepository : IProductPromotionRepo
     {
-        public Task<ProductPromotion> AddAsync(ProductPromotion productPromotion)
+        private readonly AppDbContext _context;
+        public ProductPromotionRepository(AppDbContext context)
         {
-            return null;
+            _context = context;
+        }
+        public async Task<ProductPromotion> AddAsync(ProductPromotion productPromotion)
+        {
+            _context.ProductPromotions.Add(productPromotion);
+            await _context.SaveChangesAsync();
+            return productPromotion;
         }
 
-        public Task DeleteAsync(ProductPromotion productPromotion)
+        public async Task DeleteAsync(ProductPromotion productPromotion)
         {
-            throw new NotImplementedException();
+            _context.ProductPromotions.Remove(productPromotion);
+            await _context.SaveChangesAsync();
         }
 
-        public Task<List<ProductPromotion>> GetAllAsync()
+        public async Task<List<ProductPromotion>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _context.ProductPromotions
+                .Include(x=>x.Product)
+                .Include(x=>x.Promotion)
+                .OrderByDescending(x => x.PromotionID)
+                .ToListAsync();
         }
 
-        public Task<ProductPromotion?> GetByIdAsync(int id)
+        public async Task<ProductPromotion?> GetByIdAsync(int productId, int promotionId)
         {
-            throw new NotImplementedException();
+            return await _context.ProductPromotions
+                .Include(x => x.Product)
+                .Include(x => x.Promotion)
+                .FirstOrDefaultAsync(x => x.ProductID == productId && x.PromotionID == promotionId);
         }
 
-        public Task UpdateAsync(ProductPromotion productPromotion)
+        public async Task UpdateAsync(ProductPromotion productPromotion)
         {
-            throw new NotImplementedException();
+            _context.ProductPromotions.Update(productPromotion);
+            await _context.SaveChangesAsync();
         }
     }
 }

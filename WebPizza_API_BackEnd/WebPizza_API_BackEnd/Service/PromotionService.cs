@@ -35,11 +35,12 @@ namespace WebPizza_API_BackEnd.Service
         public async Task<ActionResult<PaginationModel<PromotionGetVModel>>> GetAll(PromotionFilterParams parameters)
         {
                 var promotions = await _promotionRepo.GetAllAsync(parameters);
-                var promotionViewModels = promotions.Select(x => PromotionMappings.ToPromotionGetVModel(x)).ToList();
-                return new PaginationModel<PromotionGetVModel>
+            var ds = promotions.Skip((parameters.PageNumber - 1) * parameters.PageSize)
+             .Take(parameters.PageSize).Select(x => PromotionMappings.ToPromotionGetVModel(x)).ToList();
+            return new PaginationModel<PromotionGetVModel>
                 {
-                    Records = promotionViewModels,
-                    TotalRecords = promotionViewModels.Count
+                    Records = ds,
+                    TotalRecords = ds.Count
                 };
         }
 
