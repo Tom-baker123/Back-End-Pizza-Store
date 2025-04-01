@@ -30,7 +30,7 @@ namespace WebPizza_API_BackEnd.Context
         {
             base.OnModelCreating(modelBuilder);
 
-            // **Cấu hình bảng ProductSizes (Nhiều-Nhiều giữa Product và Size)**
+            // **Cấu hinh bảng ProductSizes (Nhiều-Nhiều giữa Product và Size)**
             modelBuilder.Entity<ProductSize>()
                 .HasKey(ps => new { ps.ProductID, ps.SizeID });
 

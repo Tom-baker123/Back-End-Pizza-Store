@@ -4,10 +4,10 @@ namespace WebPizza_API_BackEnd.Repository.InterfaceRepo
 {
     public interface IOrderRepository
     {
-        Task<IEnumerable<Order>> GetAllAsync();
-        Task<Order> GetByIdAsync(int id);
-        Task<Order> CreateAsync(Order order);
-        Task UpdateAsync(Order order);
-        Task DeleteAsync(int id);
+        Task<IEnumerable<Order>> GetOrdersAsync();
+        Task<Order> GetOrderByIdAsync(int id);
+        Task<Order> AddOrderAsync(Order order);
+        Task<bool> UpdateOrderAsync(Order order);
+        Task<bool> DeleteOrderAsync(int id);
     }
 }

@@ -9,70 +9,78 @@ namespace WebPizza_API_BackEnd.Service
     public class OrderService : IOrderService
     {
         private readonly IOrderRepository _orderRepository;
-        private readonly IMapper _mapper;
 
-        public OrderService(IOrderRepository orderRepository, IMapper mapper)
+        public OrderService(IOrderRepository orderRepository)
         {
             _orderRepository = orderRepository;
-            _mapper = mapper;
         }
 
-        public async Task<IEnumerable<OrderVModel>> GetAllAsync()
+        public async Task<IEnumerable<OrderVModel>> GetOrdersAsync()
         {
-            var orders = await _orderRepository.GetAllAsync();
-            return _mapper.Map<IEnumerable<OrderVModel>>(orders);
-        }
-
-        public async Task<OrderVModel> GetByIdAsync(int id)
-        {
-            var order = await _orderRepository.GetByIdAsync(id);
-            if (order == null)
+            var orders = await _orderRepository.GetOrdersAsync();
+            return orders.Select(o => new OrderVModel
             {
-                throw new KeyNotFoundException($"Order with ID {id} not found.");
-            }
-            return _mapper.Map<OrderVModel>(order);
+                UserID = o.UserID,
+                TotalAmount = o.TotalAmount,
+                Status = o.Status,
+                OrderDate = o.OrderDate,
+                VoucherID = o.VoucherID
+            });
         }
 
-        public async Task<OrderVModel> CreateAsync(CreateOrderVModel model)
+        public async Task<OrderVModel> GetOrderByIdAsync(int id)
         {
-            var order = _mapper.Map<Order>(model);
-
-            // Create related entities
-            order.OrderDetails = _mapper.Map<ICollection<OrderDetail>>(model.OrderDetails);
-
-            if (model.Payment != null)
+            var order = await _orderRepository.GetOrderByIdAsync(id);
+            if (order == null) return null;
+            return new OrderVModel
             {
-                order.Payment = _mapper.Map<Payment>(model.Payment);
-                order.Payment.PaymentDate = DateTime.Now;
-            }
-
-            var createdOrder = await _orderRepository.CreateAsync(order);
-            return _mapper.Map<OrderVModel>(createdOrder);
+                OrderID = order.OrderID,
+                UserID = order.UserID,
+                TotalAmount = order.TotalAmount,
+                Status = order.Status,
+                OrderDate = order.OrderDate,
+                VoucherID = order.VoucherID
+            };
         }
 
-        public async Task<OrderVModel> UpdateAsync(int id, UpdateOrderVModel model)
+        public async Task<OrderVModel> AddOrderAsync(OrderVModel orderVm)
         {
-            var order = await _orderRepository.GetByIdAsync(id);
-            if (order == null)
+            var order = new Order
             {
-                throw new KeyNotFoundException($"Order with ID {id} not found.");
-            }
-
-            _mapper.Map(model, order);
-            await _orderRepository.UpdateAsync(order);
-
-            return await GetByIdAsync(id);
+                UserID = orderVm.UserID,
+                TotalAmount = orderVm.TotalAmount,
+                Status = orderVm.Status,
+                OrderDate = orderVm.OrderDate,
+                VoucherID = orderVm.VoucherID
+            };
+            var addedOrder = await _orderRepository.AddOrderAsync(order);
+            return new OrderVModel
+            {
+                OrderID = addedOrder.OrderID,
+                UserID = addedOrder.UserID,
+                TotalAmount = addedOrder.TotalAmount,
+                Status = addedOrder.Status,
+                OrderDate = addedOrder.OrderDate,
+                VoucherID = addedOrder.VoucherID
+            };
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task<bool> UpdateOrderAsync(OrderVModel orderVm)
         {
-            var order = await _orderRepository.GetByIdAsync(id);
-            if (order == null)
+            var order = new Order
             {
-                throw new KeyNotFoundException($"Order with ID {id} not found.");
-            }
+                UserID = orderVm.UserID,
+                TotalAmount = orderVm.TotalAmount,
+                Status = orderVm.Status,
+                OrderDate = orderVm.OrderDate,
+                VoucherID = orderVm.VoucherID
+            };
+            return await _orderRepository.UpdateOrderAsync(order);
+        }
 
-            await _orderRepository.DeleteAsync(id);
+        public async Task<bool> DeleteOrderAsync(int id)
+        {
+            return await _orderRepository.DeleteOrderAsync(id);
         }
     }
 }
