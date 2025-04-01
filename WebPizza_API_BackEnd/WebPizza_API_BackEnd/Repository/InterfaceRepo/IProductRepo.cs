@@ -17,5 +17,6 @@ namespace WebPizza_API_BackEnd.Repository.InterfaceRepo
         Task SaveChangesAsync();
         Task<Product> GetProductByNameAsync(string name);
         Task<Product> GetByIdAsyncW(int id);
+        Task<Product> GetProductWithDetailsAsync(int id);
     }
 }

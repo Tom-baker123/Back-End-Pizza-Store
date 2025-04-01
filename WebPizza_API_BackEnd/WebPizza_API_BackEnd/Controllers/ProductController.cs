@@ -5,6 +5,7 @@ using OA.Domain.Common.Models;
 using WebPizza_API_BackEnd.Common.Models;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
+using WebPizza_API_BackEnd.ViewModels.Order;
 
 namespace WebPizza_API_BackEnd.Controllers
 {
@@ -118,6 +119,25 @@ namespace WebPizza_API_BackEnd.Controllers
             }
 
             return Ok(result);
+        }
+        [HttpGet("{id}/details")]
+        public async Task<ActionResult<ProductModel>> GetProductWithDetails(int id)
+        {
+            try
+            {
+                var product = await _productService.GetProductWithDetailsAsync(id);
+                return Ok(product);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning(ex, ex.Message);
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error getting product details");
+                return StatusCode(500, "An error occurred while processing your request.");
+            }
         }
     }
 }

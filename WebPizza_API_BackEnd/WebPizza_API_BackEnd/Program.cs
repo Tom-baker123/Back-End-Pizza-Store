@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using WebPizza_API_BackEnd.Context;
 using WebPizza_API_BackEnd.Helpers;
+using WebPizza_API_BackEnd.Mapping;
 using WebPizza_API_BackEnd.Repository;
 using WebPizza_API_BackEnd.Repository.InterfaceRepo;
 using WebPizza_API_BackEnd.Service;
@@ -33,6 +34,7 @@ builder.Services.AddScoped<IToppingService, ToppingService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IPromotionService,PromotionService>();
 builder.Services.AddScoped<IProductPromotionService, ProductPromotionService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
 // Đăng lớp Repository
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepo, ProductRepository>();
@@ -40,6 +42,7 @@ builder.Services.AddScoped<ISizeRepo, SizeRepository>();
 builder.Services.AddScoped<ITopingRepo, ToppingRepository>();
 builder.Services.AddScoped<IPromotionRepo, PromotionRepository>();
 builder.Services.AddScoped<IProductPromotionRepo, ProductPromotionRepository>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 // ... (giữ nguyên các đăng ký khác)
 
 // 4. Cloudinary
@@ -69,7 +72,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
         };
     });
-
+builder.Services.AddAutoMapper(typeof(OrderProfile));
+builder.Services.AddAutoMapper(typeof(ProductProfile));
 // 6. Các dịch vụ khác
 builder.Services.AddAuthorization();
 builder.Services.AddControllers();
