@@ -56,12 +56,13 @@ namespace WebPizza_API_BackEnd.Service
         public async Task<ActionResult<PaginationModel<ToppingGetVModel>>>  GetAll(ToppingFilterParams parameters)
         {
             var toppings = await _topingRepo.GetAllAsync();
-            var toppingViewModels = toppings.Select(x => ToppingMappngs.EntityToVModel(x)).ToList();
+            var ds = toppings.Skip((parameters.PageNumber - 1) * parameters.PageSize)
+                 .Take(parameters.PageSize).Select(x => ToppingMappngs.EntityToVModel(x)).ToList();
 
             return new PaginationModel<ToppingGetVModel>
             {
-                Records = toppingViewModels,
-                TotalRecords = toppingViewModels.Count
+                 Records = ds,
+                TotalRecords = ds.Count
             };
         }
 

@@ -16,7 +16,7 @@ namespace WebPizza_API_BackEnd.VModel
     }
     public class CategoryFilterParams
     {
-        //public bool? IsActive { get; set; }
+        public string? Name { get; set; }
         public int PageSize { get; set; } = Numbers.Pagination.DefaultPageSize;
         public int PageNumber { get; set; } = Numbers.Pagination.DefaultPageNumber;
     }

@@ -21,7 +21,8 @@ namespace WebPizza_API_BackEnd.Service
         public async Task<ActionResult<PaginationModel<CategoryGetVModel>>> GetAll(CategoryFilterParams parameters)
         {
             var categories = await _categoryRepository.GetAllAsync();
-            var ds = categories.Select(CategoryMappings.EntityToVModel).ToList();
+            var ds = categories.Skip((parameters.PageNumber - 1) * parameters.PageSize)
+                 .Take(parameters.PageSize).Select(x => CategoryMappings.EntityToVModel(x)).ToList();
 
             return new PaginationModel<CategoryGetVModel>
             {

@@ -5,7 +5,7 @@ namespace WebPizza_API_BackEnd.Repository.InterfaceRepo
     public interface IProductPromotionRepo
     {
         Task<List<ProductPromotion>> GetAllAsync();
-        Task<ProductPromotion?> GetByIdAsync(int id);
+        Task<ProductPromotion?> GetByIdAsync(int productId, int promotionId);
         Task<ProductPromotion> AddAsync(ProductPromotion productPromotion);
         Task UpdateAsync(ProductPromotion productPromotion);
         Task DeleteAsync(ProductPromotion productPromotion);

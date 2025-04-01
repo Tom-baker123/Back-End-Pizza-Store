@@ -44,5 +44,21 @@ namespace WebPizza_API_BackEnd.Mapping
             }
             return productPromotion;
         }
+        public static ProductPromotion CreateVModelToEntity(ProductPromotionCreateVModel model)
+        {
+            return new ProductPromotion
+            {
+                ProductID = model.ProductID,
+                PromotionID = model.PromotionID
+            };
+        }
+        public static ProductPromotion UpdateVModelToEntity(ProductPromotionUpdateVModel model)
+        {
+            return new ProductPromotion
+            {
+                ProductID = model.ProductID,
+                PromotionID = model.PromotionID
+            };
+        }
     }
 }
