@@ -157,3 +157,9 @@ WebPizza_API_BackEnd/WebPizza_API_BackEnd/obj/project.assets.json
 WebPizza_API_BackEnd/WebPizza_API_BackEnd/obj/project.nuget.cache
 WebPizza_API_BackEnd/WebPizza_API_BackEnd/obj/WebPizza_API_BackEnd.csproj.nuget.dgspec.json
 WebPizza_API_BackEnd/WebPizza_API_BackEnd/obj/WebPizza_API_BackEnd.csproj.nuget.g.props
+WebPizza_API_BackEnd/WebPizza_API_BackEnd/bin/Debug/net8.0/WebPizza_API_BackEnd.dll
+WebPizza_API_BackEnd/.vs/WebPizza_API_BackEnd/v17/DocumentLayout.backup.json
+WebPizza_API_BackEnd/WebPizza_API_BackEnd/bin/Debug/net8.0/WebPizza_API_BackEnd.dll
+WebPizza_API_BackEnd/WebPizza_API_BackEnd/bin/Debug/net8.0/WebPizza_API_BackEnd.exe
+WebPizza_API_BackEnd/WebPizza_API_BackEnd/bin/Debug/net8.0/WebPizza_API_BackEnd.pdb
+WebPizza_API_BackEnd/WebPizza_API_BackEnd/Migrations/20250328122003_DBPizaaStoreV6.cs
