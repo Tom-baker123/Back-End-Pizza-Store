@@ -10,112 +10,48 @@ namespace WebPizza_API_BackEnd.Controllers
     public class OrdersController : ControllerBase
     {
         private readonly IOrderService _orderService;
-        private readonly ILogger<OrdersController> _logger;
 
-        public OrdersController(IOrderService orderService, ILogger<OrdersController> logger)
+        public OrdersController(IOrderService orderService)
         {
             _orderService = orderService;
-            _logger = logger;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<OrderVModel>>> GetAll()
+        public async Task<ActionResult<IEnumerable<OrderVModel>>> GetOrders()
         {
-            try
-            {
-                var orders = await _orderService.GetAllAsync();
-                return Ok(orders);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error getting all orders");
-                return StatusCode(500, "An error occurred while getting orders.");
-            }
+            return Ok(await _orderService.GetOrdersAsync());
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<OrderVModel>> GetById(int id)
+        public async Task<ActionResult<OrderVModel>> GetOrder(int id)
         {
-            try
-            {
-                var order = await _orderService.GetByIdAsync(id);
-                return Ok(order);
-            }
-            catch (KeyNotFoundException ex)
-            {
-                _logger.LogWarning(ex, ex.Message);
-                return NotFound(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, $"Error getting order with ID {id}");
-                return StatusCode(500, "An error occurred while getting the order.");
-            }
+            var order = await _orderService.GetOrderByIdAsync(id);
+            if (order == null) return NotFound();
+            return Ok(order);
         }
 
         [HttpPost]
-        public async Task<ActionResult<OrderVModel>> Create([FromBody] CreateOrderVModel model)
+        public async Task<ActionResult<OrderVModel>> PostOrder(OrderVModel orderVm)
         {
-            try
-            {
-                if (!ModelState.IsValid)
-                {
-                    return BadRequest(ModelState);
-                }
-
-                var createdOrder = await _orderService.CreateAsync(model);
-                return CreatedAtAction(nameof(GetById), new { id = createdOrder.OrderID }, createdOrder);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error creating order");
-                return StatusCode(500, "An error occurred while creating the order.");
-            }
+            var createdOrder = await _orderService.AddOrderAsync(orderVm);
+            return CreatedAtAction("GetOrder", new { id = createdOrder.OrderID }, createdOrder);
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<OrderVModel>> Update(int id, [FromBody] UpdateOrderVModel model)
+        public async Task<IActionResult> PutOrder(int id, OrderVModel orderVm)
         {
-            try
-            {
-                if (!ModelState.IsValid)
-                {
-                    return BadRequest(ModelState);
-                }
-
-                var updatedOrder = await _orderService.UpdateAsync(id, model);
-                return Ok(updatedOrder);
-            }
-            catch (KeyNotFoundException ex)
-            {
-                _logger.LogWarning(ex, ex.Message);
-                return NotFound(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, $"Error updating order with ID {id}");
-                return StatusCode(500, "An error occurred while updating the order.");
-            }
+            if (id != orderVm.OrderID) return BadRequest();
+            var result = await _orderService.UpdateOrderAsync(orderVm);
+            if (!result) return NotFound();
+            return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> DeleteOrder(int id)
         {
-            try
-            {
-                await _orderService.DeleteAsync(id);
-                return NoContent();
-            }
-            catch (KeyNotFoundException ex)
-            {
-                _logger.LogWarning(ex, ex.Message);
-                return NotFound(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, $"Error deleting order with ID {id}");
-                return StatusCode(500, "An error occurred while deleting the order.");
-            }
+            var result = await _orderService.DeleteOrderAsync(id);
+            if (!result) return NotFound();
+            return NoContent();
         }
     }
 }
