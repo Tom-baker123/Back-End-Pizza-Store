@@ -1,8 +1,7 @@
 ﻿using OA.Domain.Common.Constants;
 using WebPizza_API_BackEnd.Entities;
-using WebPizza_API_BackEnd.VModel;
 
-namespace WebPizza_API_BackEnd.ViewModels
+namespace WebPizza_API_BackEnd.VModel
 {
     public class ProductCreateVModel
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OA.Domain.Common.Models;
 using WebPizza_API_BackEnd.Common.Models;
-using WebPizza_API_BackEnd.ViewModels;
+using WebPizza_API_BackEnd.VModel;
 
 namespace WebPizza_API_BackEnd.Service.IService
 {
