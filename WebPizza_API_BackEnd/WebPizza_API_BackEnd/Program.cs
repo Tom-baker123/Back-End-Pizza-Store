@@ -1,32 +1,26 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using CloudinaryDotNet;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using WebPizza_API_BackEnd.Context;
+using WebPizza_API_BackEnd.Helpers;
 using WebPizza_API_BackEnd.Repository;
 using WebPizza_API_BackEnd.Repository.InterfaceRepo;
 using WebPizza_API_BackEnd.Service;
 using WebPizza_API_BackEnd.Service.IService;
 
 var builder = WebApplication.CreateBuilder(args);
-//cors
 
+// 1. CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
-    {
-        policy.AllowAnyOrigin()
-              .AllowAnyMethod()
-              .AllowAnyHeader();
-    });
-});//
+        policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
 
-// Đọc chuỗi kết nối từ appsettings.json
+// 2. Database
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
-
-
-// Thêm DbContext vào DI container
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(connectionString));
 
@@ -37,7 +31,7 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ISizeService, SizeService>();
 builder.Services.AddScoped<IToppingService, ToppingService>();
 builder.Services.AddScoped<IProductService, ProductService>();
-builder.Services.AddScoped<IPromotionService,PromotionService>();
+builder.Services.AddScoped<IPromotionService, PromotionService>();
 // Đăng lớp Repository
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepo, ProductRepository>();
@@ -45,11 +39,17 @@ builder.Services.AddScoped<ISizeRepo, SizeRepository>();
 builder.Services.AddScoped<ITopingRepo, ToppingRepository>();
 builder.Services.AddScoped<IPromotionRepo, PromotionRepository>();
 builder.Services.AddScoped<IProductPromotionRepo, ProductPromotionRepository>();
-//Cấu hình xác thực email
+// ... (giữ nguyên các đăng ký khác)
 
+// 4. Cloudinary
+var cloudinarySettings = builder.Configuration.GetSection("CloudinarySettings").Get<CloudinarySettings>();
+builder.Services.AddSingleton(new Cloudinary(new Account(
+    cloudinarySettings.CloudName,
+    cloudinarySettings.ApiKey,
+    cloudinarySettings.ApiSecret
+)));
 
-
-// Cấu hình xác thực JWT
+// 5. JWT Authentication
 var jwtKey = builder.Configuration["Jwt:Key"];
 var jwtIssuer = builder.Configuration["Jwt:Issuer"];
 var jwtAudience = builder.Configuration["Jwt:Audience"];
@@ -69,32 +69,26 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-// Thêm Authorization
+// 6. Các dịch vụ khác
 builder.Services.AddAuthorization();
-
-// Thêm các dịch vụ khác
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// 🔥 QUAN TRỌNG: CHỈ GỌI Build() 1 LẦN DUY NHẤT
 var app = builder.Build();
 
-// Cấu hình middleware
+// 7. Middleware pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseCors("AllowAll"); 
-app.UseHttpsRedirection();
-app.UseAuthentication(); // 🔥 Bắt buộc phải có nếu dùng JWT
-app.UseAuthorization();
 
+app.UseCors("AllowAll");
+app.UseHttpsRedirection();
+app.UseAuthentication();
+app.UseAuthorization();
 app.MapControllers();
-//using (var scope = app.Services.CreateScope())
-//{
-//    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-//    context.Database.Migrate(); // Đảm bảo DB cập nhật
-//    DbInitializer.SeedData(context); // Gọi seed data
-//}
+
 app.Run();

@@ -8,6 +8,7 @@ namespace OA.Domain.Common.Models
 {
     public class ResponseResult
     {
+
         public bool IsSuccess { get; set; } = false;
         public string? Message { get; set; }
         public dynamic? Data { get; set; }
@@ -15,6 +16,7 @@ namespace OA.Domain.Common.Models
 
     public class SuccessResponseResult: ResponseResult
     {
+        public int Id { get; set; }
         public SuccessResponseResult()
         {
             IsSuccess = true;
@@ -53,4 +55,5 @@ namespace OA.Domain.Common.Models
             Message = message;
         }
     }
+
 }

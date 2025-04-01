@@ -60,7 +60,7 @@ namespace WebPizza_API_BackEnd.Service
             };
         }
 
-        public async Task<ResponseResult> Create(ProductCreateVModel model)
+        public async Task<ResponseResult> Create(ProductCreateVModel model, string imageUrl)
         {
             try
             {
@@ -70,11 +70,13 @@ namespace WebPizza_API_BackEnd.Service
                     Description = model.Description,
                     Price = model.Price,
                     CategoryID = model.CategoryID,
-                    ImageURL = model.ImageURL
+                    ImageURL = imageUrl // Sửa từ model.ImageURL sang imageUrl
                 };
 
                 await _productRepository.AddAsync(product);
-                return new SuccessResponseResult(model, "Tạo sản phẩm thành công");
+                await _productRepository.SaveChangesAsync();
+
+                return new SuccessResponseResult(product.Id, "Tạo sản phẩm thành công");
             }
             catch (Exception ex)
             {
@@ -124,6 +126,10 @@ namespace WebPizza_API_BackEnd.Service
             {
                 return new ErrorResponseResult(ex.Message);
             }
+        }
+         public async Task<Product> GetProductByNameAsync(string name)
+        {
+            return await _productRepository.GetProductByNameAsync(name);
         }
     }
 }
