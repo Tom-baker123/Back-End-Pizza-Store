@@ -44,6 +44,7 @@ builder.Services.AddScoped<IProductRepo, ProductRepository>();
 builder.Services.AddScoped<ISizeRepo, SizeRepository>();
 builder.Services.AddScoped<ITopingRepo, ToppingRepository>();
 builder.Services.AddScoped<IPromotionRepo, PromotionRepository>();
+builder.Services.AddScoped<IProductPromotionRepo, ProductPromotionRepository>();
 //Cấu hình xác thực email
 
 

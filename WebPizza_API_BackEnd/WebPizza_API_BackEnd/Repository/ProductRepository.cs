@@ -2,7 +2,7 @@
 using WebPizza_API_BackEnd.Context;
 using WebPizza_API_BackEnd.Entities;
 using WebPizza_API_BackEnd.Repository.InterfaceRepo;
-using WebPizza_API_BackEnd.ViewModels;
+using WebPizza_API_BackEnd.VModel;
 
 namespace WebPizza_API_BackEnd.Repository
 {

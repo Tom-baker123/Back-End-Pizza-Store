@@ -18,6 +18,7 @@ namespace WebPizza_API_BackEnd.VModel
     }
     public class PromotionGetVModel : PromotionUpdateVModel
     {
+        public string Status { get; set; }
         public DateTime CreatedAt { get; set; }
     }
     public class PromotionFilterParams
