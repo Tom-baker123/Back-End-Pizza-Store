@@ -2,6 +2,7 @@
 using OA.Domain.Common.Models;
 using WebPizza_API_BackEnd.Common.Models;
 using WebPizza_API_BackEnd.Entities;
+using WebPizza_API_BackEnd.ViewModels.Order;
 using WebPizza_API_BackEnd.VModel;
 
 namespace WebPizza_API_BackEnd.Service.IService
@@ -14,5 +15,7 @@ namespace WebPizza_API_BackEnd.Service.IService
         Task<ResponseResult> Update(int id, ProductUpdateVModel model);
         Task<ResponseResult> Remove(int id);
         Task<Product> GetProductByNameAsync(string name);
+        Task<ProductModel> GetProductWithDetailsAsync(int id);
     }
 }
+

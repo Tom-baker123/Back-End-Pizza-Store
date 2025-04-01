@@ -87,5 +87,20 @@ namespace WebPizza_API_BackEnd.Repository
                 // Tìm sản phẩm theo ID
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
+        public async Task<Product> GetProductWithDetailsAsync(int id)
+        {
+            return await _context.Products
+                .Include(p => p.Category)
+                .Include(p => p.Carts)
+                .Include(p => p.OrderDetails)
+                .Include(p => p.ProductSizes)
+                    .ThenInclude(ps => ps.Size)
+                .Include(p => p.ProductToppings)
+                    .ThenInclude(pt => pt.Topping)
+                .Include(p => p.ProductPromotions)
+                    .ThenInclude(pp => pp.Promotion)
+                .Include(p => p.Reviews)
+                .FirstOrDefaultAsync(p => p.Id == id);
+        }
     }
 }

@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using OA.Domain.Common.Models;
 using WebPizza_API_BackEnd.Common.Models;
 using WebPizza_API_BackEnd.Entities;
 using WebPizza_API_BackEnd.Repository;
 using WebPizza_API_BackEnd.Repository.InterfaceRepo;
 using WebPizza_API_BackEnd.Service.IService;
+using WebPizza_API_BackEnd.ViewModels.Order;
+
 //using WebPizza_API_BackEnd.ViewModels;
 using WebPizza_API_BackEnd.VModel;
 
@@ -13,10 +16,13 @@ namespace WebPizza_API_BackEnd.Service
     public class ProductService : IProductService
     {
         private readonly IProductRepo _productRepository;
+        private readonly IMapper _mapper;
 
-        public ProductService(IProductRepo productRepository)
+        public ProductService(IProductRepo productRepository, IMapper mapper)
         {
             _productRepository = productRepository;
+            _mapper = mapper;
+
         }
 
         public async Task<ActionResult<PaginationModel<ProductGetVModel>>> GetAll(ProductFilterParams parameters)
@@ -123,6 +129,16 @@ namespace WebPizza_API_BackEnd.Service
          public async Task<Product> GetProductByNameAsync(string name)
         {
             return await _productRepository.GetProductByNameAsync(name);
+        }
+        public async Task<ProductModel> GetProductWithDetailsAsync(int id)
+        {
+            var product = await _productRepository.GetProductWithDetailsAsync(id);
+            if (product == null)
+            {
+                throw new KeyNotFoundException($"Product with ID {id} not found.");
+            }
+
+            return _mapper.Map<ProductModel>(product);
         }
     }
 }
