@@ -3,6 +3,8 @@ using WebPizza_API_BackEnd.Service.IService;
 using WebPizza_API_BackEnd.VModel;
 using OA.Domain.Common.Models;
 using WebPizza_API_BackEnd.Common.Models;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
 
 namespace WebPizza_API_BackEnd.Controllers
 {
@@ -11,10 +13,14 @@ namespace WebPizza_API_BackEnd.Controllers
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
+        private readonly ILogger<ProductController> _logger;
+        private readonly Cloudinary _cloudinary;
 
-        public ProductController(IProductService productService)
+        public ProductController(IProductService productService, ILogger<ProductController> logger, Cloudinary cloudinary)
         {
             _productService = productService;
+            _logger = logger;
+            _cloudinary = cloudinary;
         }
 
         // GET: api/product
@@ -39,38 +45,66 @@ namespace WebPizza_API_BackEnd.Controllers
 
         // POST: api/product
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] ProductCreateVModel model)
+        public async Task<IActionResult> CreateProduct([FromForm] ProductCreateVModel productDto, IFormFile ImageFile)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                return BadRequest(ModelState);
-            }
+                // Kiểm tra trùng tên
+                var existingProduct = await _productService.GetProductByNameAsync(productDto.Name);
+                if (existingProduct != null)
+                {
+                    return BadRequest(new { Message = "Product name already exists." });
+                }
 
-            var result = await _productService.Create(model);
-            if (result is ErrorResponseResult errorResult)
+                // Xử lý upload ảnh
+                string imageUrl = null;
+                if (ImageFile != null && ImageFile.Length > 0)
+                {
+                    string[] allowedExtensions = { ".jpg", ".jpeg", ".png", ".gif" };
+                    var fileExtension = Path.GetExtension(ImageFile.FileName).ToLower();
+
+                    if (!allowedExtensions.Contains(fileExtension))
+                        return BadRequest("Unsupported file type");
+
+                    var uploadParams = new ImageUploadParams
+                    {
+                        File = new FileDescription(ImageFile.FileName, ImageFile.OpenReadStream()),
+                        Transformation = new Transformation().Width(500).Height(500).Crop("fill")
+                    };
+
+                    var uploadResult = await _cloudinary.UploadAsync(uploadParams);
+
+                    if (uploadResult.Error != null)
+                    {
+                        _logger.LogError("Cloudinary upload error: {ErrorMessage}", uploadResult.Error.Message);
+                        return BadRequest($"Cloudinary upload failed: {uploadResult.Error.Message}");
+                    }
+
+                    imageUrl = uploadResult.SecureUrl.AbsoluteUri;
+
+                }
+
+                // Gọi service
+                var result = await _productService.Create(productDto, imageUrl);
+
+                if (!result.IsSuccess)
+                {
+                    return BadRequest(result.Message);
+                }
+
+                // Ép kiểu để lấy ID
+                var successResult = result as SuccessResponseResult;
+                return CreatedAtAction(nameof(GetById), new { id = successResult.Id }, new
+                {
+                    Message = successResult.Message,
+                    ProductId = successResult.Id
+                });
+            }
+            catch (Exception ex)
             {
-                return BadRequest(errorResult);
+                _logger.LogError("Error creating product: {Error}", ex.Message);
+                return StatusCode(500, new { Message = ex.Message });
             }
-
-            return Ok(result);
-        }
-
-        // PUT: api/product/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] ProductUpdateVModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            var result = await _productService.Update(id, model);
-            if (result is ErrorResponseResult errorResult)
-            {
-                return BadRequest(errorResult);
-            }
-
-            return Ok(result);
         }
 
         // DELETE: api/product/5

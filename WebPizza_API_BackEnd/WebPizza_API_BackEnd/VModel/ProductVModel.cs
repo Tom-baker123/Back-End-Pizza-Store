@@ -1,16 +1,18 @@
 ﻿using OA.Domain.Common.Constants;
+using System.Text.Json.Serialization;
 using WebPizza_API_BackEnd.Entities;
 
 namespace WebPizza_API_BackEnd.VModel
 {
     public class ProductCreateVModel
     {
-        // public int Id { get; set; }
+        public int Id { get; set; }
         public string? Name { get; set; }
         public string? Description { get; set; }
         public decimal Price { get; set; }
         public int CategoryID { get; set; }
-        public string? ImageURL { get; set; }
+
+        public string ImageURL { get; set; }
 
         // Thêm thông tin danh mục
         //   public CategoryGetVModel Category { get; set; }

@@ -11,5 +11,11 @@ namespace WebPizza_API_BackEnd.Repository.InterfaceRepo
         Task<Product> AddAsync(Product product);
         Task UpdateAsync(Product product);
         Task DeleteAsync(Product product);
+
+
+
+        Task SaveChangesAsync();
+        Task<Product> GetProductByNameAsync(string name);
+        Task<Product> GetByIdAsyncW(int id);
     }
 }
