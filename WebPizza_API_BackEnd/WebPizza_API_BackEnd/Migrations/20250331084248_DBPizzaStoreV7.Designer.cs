@@ -12,8 +12,8 @@ using WebPizza_API_BackEnd.Context;
 namespace WebPizza_API_BackEnd.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250328122003_DBPizaaStoreV6")]
-    partial class DBPizaaStoreV6
+    [Migration("20250331084248_DBPizzaStoreV7")]
+    partial class DBPizzaStoreV7
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
