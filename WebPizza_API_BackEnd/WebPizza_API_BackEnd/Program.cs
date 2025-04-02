@@ -35,6 +35,7 @@ builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IPromotionService,PromotionService>();
 builder.Services.AddScoped<IProductPromotionService, ProductPromotionService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IOrderDetailService, OrderDetailService>();
 // Đăng lớp Repository
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepo, ProductRepository>();
@@ -43,6 +44,7 @@ builder.Services.AddScoped<ITopingRepo, ToppingRepository>();
 builder.Services.AddScoped<IPromotionRepo, PromotionRepository>();
 builder.Services.AddScoped<IProductPromotionRepo, ProductPromotionRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
 // ... (giữ nguyên các đăng ký khác)
 
 // 4. Cloudinary
