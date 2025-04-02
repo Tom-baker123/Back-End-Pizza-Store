@@ -24,7 +24,7 @@ namespace WebPizza_API_BackEnd.Controllers
             _cloudinary = cloudinary;
         }
 
-        // GET: api/product
+
         [HttpGet]
         public async Task<ActionResult<PaginationModel<ProductGetVModel>>> GetAll([FromQuery] ProductFilterParams parameters)
         {
@@ -32,7 +32,7 @@ namespace WebPizza_API_BackEnd.Controllers
             return result;
         }
 
-        // GET: api/product/5
+   
         [HttpGet("{id}")]
         public async Task<ActionResult<ProductGetVModel>> GetById(int id)
         {
@@ -44,7 +44,7 @@ namespace WebPizza_API_BackEnd.Controllers
             return result;
         }
 
-        // POST: api/product
+
         [HttpPost]
         public async Task<IActionResult> CreateProduct([FromForm] ProductCreateVModel productDto, IFormFile ImageFile)
         {
@@ -107,8 +107,65 @@ namespace WebPizza_API_BackEnd.Controllers
                 return StatusCode(500, new { Message = ex.Message });
             }
         }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateProduct(int id, [FromForm] ProductUpdateVModel productDto, IFormFile ImageFile)
+        {
+            try
+            {
+                // Kiểm tra sản phẩm có tồn tại hay không
+                var existingProduct = await _productService.GetById(id);
+                if (existingProduct == null)
+                {
+                    return NotFound(new { Message = "Product not found." });
+                }
 
-        // DELETE: api/product/5
+                // Xử lý upload ảnh nếu có ảnh mới
+                string imageUrl = existingProduct.Value?.ImageURL; // Giữ ảnh cũ nếu không có ảnh mới
+                if (ImageFile != null && ImageFile.Length > 0)
+                {
+                    string[] allowedExtensions = { ".jpg", ".jpeg", ".png", ".gif" };
+                    var fileExtension = Path.GetExtension(ImageFile.FileName).ToLower();
+
+                    if (!allowedExtensions.Contains(fileExtension))
+                        return BadRequest(new { Message = "Unsupported file type" });
+
+                    var uploadParams = new ImageUploadParams
+                    {
+                        File = new FileDescription(ImageFile.FileName, ImageFile.OpenReadStream()),
+                        Transformation = new Transformation().Width(500).Height(500).Crop("fill")
+                    };
+
+                    var uploadResult = await _cloudinary.UploadAsync(uploadParams);
+
+                    if (uploadResult.Error != null)
+                    {
+                        _logger.LogError("Cloudinary upload error: {ErrorMessage}", uploadResult.Error.Message);
+                        return BadRequest(new { Message = $"Cloudinary upload failed: {uploadResult.Error.Message}" });
+                    }
+
+                    imageUrl = uploadResult.SecureUrl.AbsoluteUri;
+                }
+
+                // Gọi service để cập nhật sản phẩm
+                productDto.ImageURL = imageUrl; // Cập nhật URL ảnh vào model
+                var result = await _productService.Update(id, productDto);
+
+                if (!result.IsSuccess)
+                {
+                    return BadRequest(new { Message = result.Message });
+                }
+
+                return Ok(new { Message = "Product updated successfully", ProductId = id });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Error updating product: {Error}", ex.Message);
+                return StatusCode(500, new { Message = ex.Message });
+            }
+        }
+
+
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
