@@ -1,4 +1,7 @@
-﻿using WebPizza_API_BackEnd.VModel;
+﻿using Microsoft.AspNetCore.Mvc;
+using OA.Domain.Common.Models;
+using WebPizza_API_BackEnd.Entities;
+using WebPizza_API_BackEnd.VModel;
 
 namespace WebPizza_API_BackEnd.Service.IService
 {
@@ -9,5 +12,7 @@ namespace WebPizza_API_BackEnd.Service.IService
         Task<IEnumerable<UserResponseVModel>> GetAllUsers();
         Task<LoginResponseVModel> ActivateAccount(string token);
         Task<LoginResponseVModel> ResendActivationEmail(string email);
+        Task<User> GetUserById(int id);
+        Task<ActionResult<ResponseResult>> Delete(int id);
     }
 }

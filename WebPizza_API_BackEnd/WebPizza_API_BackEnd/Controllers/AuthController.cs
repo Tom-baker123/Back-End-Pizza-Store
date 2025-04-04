@@ -61,6 +61,20 @@ namespace WebPizza_API_BackEnd.Controllers
             var users = await _userService.GetAllUsers();
             return Ok(users);
         }
+        [HttpGet("user/{id}")]
+        public async Task<IActionResult> GetUserById(int id)
+        {
+            var user = await _userService.GetUserById(id);
+            if (user == null)
+                return NotFound();
+            return Ok(user);
+        }
+        [HttpDelete("user/{id}")]
+        public async Task<IActionResult> DeleteUser(int id)
+        {
+            var result = await _userService.Delete(id);
+            return Ok(result);
+        }
     }
 
 }
