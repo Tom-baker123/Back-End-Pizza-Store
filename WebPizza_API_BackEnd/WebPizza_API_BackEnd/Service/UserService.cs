@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using OA.Domain.Common.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -230,6 +232,26 @@ namespace WebPizza_API_BackEnd.Service
                 .Replace("{{userName}}", userName)
                 .Replace("{{confirmationLink}}", confirmationLink)
                 .Replace("{{resendActivationEmail}}", resendLink);
+        }
+
+        public async Task<User> GetUserById(int id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (user == null)
+                throw new Exception("Người dùng không tồn tại");
+            return user;
+        }
+
+        public async Task<ActionResult<ResponseResult>> Delete(int id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (user == null)
+            {
+                return new ErrorResponseResult("Người dùng không tồn tại");
+            }
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+            return new SuccessResponseResult(user, "Xóa người dùng thành công");
         }
     }
 }
