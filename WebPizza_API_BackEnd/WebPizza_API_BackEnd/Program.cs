@@ -36,6 +36,7 @@ builder.Services.AddScoped<IPromotionService,PromotionService>();
 builder.Services.AddScoped<IProductPromotionService, ProductPromotionService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IOrderDetailService, OrderDetailService>();
+builder.Services.AddScoped<IVnPayService, VnPayService>();
 // Đăng lớp Repository
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepo, ProductRepository>();
