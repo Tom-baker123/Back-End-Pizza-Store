@@ -31,4 +31,12 @@ namespace WebPizza_API_BackEnd.VModel
         public string Name { get; set; } = string.Empty;
         public decimal Price { get; set; }
     }
+    public class CartResponseVModel
+    {
+        public int CartID { get; set; }
+        public int ProductID { get; set; }
+        public int Quantity { get; set; }
+        public ICollection<ShortGetProduct> shortGetProducts { get; set; } = new List<ShortGetProduct>();
+    }
+
 }

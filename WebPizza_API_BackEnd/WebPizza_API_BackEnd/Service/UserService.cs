@@ -234,12 +234,50 @@ namespace WebPizza_API_BackEnd.Service
                 .Replace("{{resendActivationEmail}}", resendLink);
         }
 
-        public async Task<User> GetUserById(int id)
+        public async Task<UserResponseVModel> GetUserById(int id)
         {
-            var user = await _context.Users.FindAsync(id);
+            // Tải dữ liệu người dùng cùng với giỏ hàng và sản phẩm liên quan
+            var user = await _context.Users
+                .Include(u => u.Carts)
+                .ThenInclude(c => c.Product)
+                .FirstOrDefaultAsync(u => u.UserID == id);
+
+            // Kiểm tra người dùng có tồn tại không
             if (user == null)
+            {
                 throw new Exception("Người dùng không tồn tại");
-            return user;
+            }
+
+            // Ánh xạ dữ liệu sang UserResponseVModel
+            var userResponse = new UserResponseVModel
+            {
+                UserID = user.UserID,
+                FullName = user.FullName,
+                Email = user.Email,
+                Phone = user.Phone,
+                Address = user.Address,
+                Role = user.Role,
+                CreatedAt = user.CreatedAt,
+                Carts = user.Carts.Select(c => new CartResponseVModel
+                {
+                    CartID = c.CartID,          
+                    ProductID = c.ProductID,
+                    Quantity = c.Quantity,
+                    shortGetProducts = new List<ShortGetProduct>
+                    {
+                        new ShortGetProduct
+                        {
+                            ProductID = c.Product.Id,
+                            Name = c.Product.Name,
+                            Price = c.Product.Price,
+                            ImageURL = c.Product.ImageURL,
+                        }
+                    }
+
+                }).ToList()
+            };
+
+            return userResponse;
         }
 
         public async Task<ActionResult<ResponseResult>> Delete(int id)

@@ -12,7 +12,7 @@ namespace WebPizza_API_BackEnd.Service.IService
         Task<IEnumerable<UserResponseVModel>> GetAllUsers();
         Task<LoginResponseVModel> ActivateAccount(string token);
         Task<LoginResponseVModel> ResendActivationEmail(string email);
-        Task<User> GetUserById(int id);
+        Task<UserResponseVModel> GetUserById(int id);
         Task<ActionResult<ResponseResult>> Delete(int id);
     }
 }
