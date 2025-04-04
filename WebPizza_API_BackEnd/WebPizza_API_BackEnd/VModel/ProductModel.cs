@@ -92,4 +92,12 @@
         public DateTime CreatedAt { get; set; }
         public int UserId { get; set; }
     }
+    public class  ShortGetProduct
+    {
+        public int ProductID { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public string ImageURL { get; set; }
+
+    }
 }
