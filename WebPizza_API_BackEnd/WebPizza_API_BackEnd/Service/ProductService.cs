@@ -140,5 +140,20 @@ namespace WebPizza_API_BackEnd.Service
 
             return _mapper.Map<ProductModel>(product);
         }
+        public async  Task<ActionResult<PaginationModel<ProductGetVModel>>> GetProductsByCategoryId(ProductFilterParams parameters, int categoryId)
+        {
+            var products = await _productRepository.GetAllAsync();
+
+            var ds = products.Skip((parameters.PageNumber - 1) * parameters.PageSize)
+                 .Take(parameters.PageSize)
+                 .Where(x => x.CategoryID == categoryId)
+                 .Select(x => ProductMapper.EntityToVModel(x)).ToList();
+
+            return new PaginationModel<ProductGetVModel>
+            {
+                Records = ds,
+                TotalRecords = ds.Count
+            };
+        }
     }
 }
