@@ -16,6 +16,7 @@ namespace WebPizza_API_BackEnd.Service.IService
         Task<ResponseResult> Remove(int id);
         Task<Product> GetProductByNameAsync(string name);
         Task<ProductModel> GetProductWithDetailsAsync(int id);
+        Task<ActionResult<PaginationModel<ProductGetVModel>>>GetProductsByCategoryId(ProductFilterParams parameters, int categoryId);
     }
 }
 

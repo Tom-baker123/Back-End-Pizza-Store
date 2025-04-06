@@ -32,7 +32,7 @@ namespace WebPizza_API_BackEnd.Controllers
             return result;
         }
 
-   
+
         [HttpGet("{id}")]
         public async Task<ActionResult<ProductGetVModel>> GetById(int id)
         {
@@ -195,6 +195,16 @@ namespace WebPizza_API_BackEnd.Controllers
                 _logger.LogError(ex, "Error getting product details");
                 return StatusCode(500, "An error occurred while processing your request.");
             }
+        }
+        [HttpGet("category/{categoryId}")]
+        public async Task<ActionResult<PaginationModel<ProductGetVModel>>> GetProductsByCategoryId([FromQuery] ProductFilterParams parameters, int categoryId)
+        {
+            var result = await _productService.GetProductsByCategoryId(parameters, categoryId);
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return result;
         }
     }
 }
