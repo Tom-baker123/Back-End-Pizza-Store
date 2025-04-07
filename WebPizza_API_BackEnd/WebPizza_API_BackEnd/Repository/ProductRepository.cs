@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore;
 using WebPizza_API_BackEnd.Context;
 using WebPizza_API_BackEnd.Entities;
 using WebPizza_API_BackEnd.Repository.InterfaceRepo;
@@ -15,9 +16,10 @@ namespace WebPizza_API_BackEnd.Repository
             _context = context;
         }
 
-        public async Task<List<Product>> GetAllAsync()
+        public async Task<List<Product>> GetAllAsync(ProductFilterParams parameters)
         {
             return await _context.Products
+                .Where(BuildQueryable(parameters))
                 .Include(p => p.Category)
                 .OrderByDescending(p => p.Id)
                 .ToListAsync();
@@ -101,6 +103,12 @@ namespace WebPizza_API_BackEnd.Repository
                     .ThenInclude(pp => pp.Promotion)
                 .Include(p => p.Reviews)
                 .FirstOrDefaultAsync(p => p.Id == id);
+        }
+
+        private Expression<Func<Product, bool>> BuildQueryable(ProductFilterParams fParams)
+        {
+            return x =>
+                (fParams.Name == null || (x.Name != null && x.Name.Contains(fParams.Name)));
         }
     }
 }

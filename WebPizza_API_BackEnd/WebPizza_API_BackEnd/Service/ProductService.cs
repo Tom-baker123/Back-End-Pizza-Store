@@ -28,7 +28,7 @@ namespace WebPizza_API_BackEnd.Service
         public async Task<ActionResult<PaginationModel<ProductGetVModel>>> GetAll(ProductFilterParams parameters)
 
         {
-            var products = await _productRepository.GetAllAsync();
+            var products = await _productRepository.GetAllAsync(parameters);
 
             var ds = products.Skip((parameters.PageNumber - 1) * parameters.PageSize)
                  .Take(parameters.PageSize).Select(x => ProductMapper.EntityToVModel(x)).ToList();
@@ -142,7 +142,7 @@ namespace WebPizza_API_BackEnd.Service
         }
         public async  Task<ActionResult<PaginationModel<ProductGetVModel>>> GetProductsByCategoryId(ProductFilterParams parameters, int categoryId)
         {
-            var products = await _productRepository.GetAllAsync();
+            var products = await _productRepository.GetAllAsync(parameters);
 
             var ds = products
                      .Where(x => x.CategoryID == categoryId)   
