@@ -30,6 +30,7 @@ namespace WebPizza_API_BackEnd.VModel
 
     public class ProductFilterParams
     {
+        public string? Name { get; set; }
         public int PageSize { get; set; } = Numbers.Pagination.DefaultPageSize;
         public int PageNumber { get; set; } = Numbers.Pagination.DefaultPageNumber;
     }
