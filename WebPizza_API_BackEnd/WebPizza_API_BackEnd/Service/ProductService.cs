@@ -144,10 +144,11 @@ namespace WebPizza_API_BackEnd.Service
         {
             var products = await _productRepository.GetAllAsync();
 
-            var ds = products.Skip((parameters.PageNumber - 1) * parameters.PageSize)
-                 .Take(parameters.PageSize)
-                 .Where(x => x.CategoryID == categoryId)
-                 .Select(x => ProductMapper.EntityToVModel(x)).ToList();
+            var ds = products
+                     .Where(x => x.CategoryID == categoryId)   
+                     .Skip((parameters.PageNumber - 1) * parameters.PageSize)
+                     .Take(parameters.PageSize)
+                     .Select(x => ProductMapper.EntityToVModel(x)).ToList();
 
             return new PaginationModel<ProductGetVModel>
             {
