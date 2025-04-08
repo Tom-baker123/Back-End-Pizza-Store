@@ -20,6 +20,7 @@ namespace WebPizza_API_BackEnd.Service
             var orders = await _orderRepository.GetOrdersAsync();
             return orders.Select(o => new OrderVModel
             {
+                OrderID = o.OrderID,
                 UserID = o.UserID,
                 TotalAmount = o.TotalAmount,
                 Status = o.Status,
