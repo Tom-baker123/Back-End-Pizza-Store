@@ -31,7 +31,7 @@ namespace WebPizza_API_BackEnd.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<OrderVModel>> PostOrder(OrderVModel orderVm)
+        public async Task<ActionResult<OrderCeateVModel>> PostOrder(OrderCeateVModel orderVm)
         {
             var createdOrder = await _orderService.AddOrderAsync(orderVm);
             return CreatedAtAction("GetOrder", new { id = createdOrder.OrderID }, createdOrder);

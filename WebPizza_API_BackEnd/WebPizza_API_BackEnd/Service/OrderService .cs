@@ -44,7 +44,7 @@ namespace WebPizza_API_BackEnd.Service
             };
         }
 
-        public async Task<OrderVModel> AddOrderAsync(OrderVModel orderVm)
+        public async Task<OrderVModel> AddOrderAsync(OrderCeateVModel orderVm)
         {
             var order = new Order
             {
