@@ -74,7 +74,7 @@ namespace WebPizza_API_BackEnd.Service
                 return new LoginResponseVModel { Success = false, Message = "Tài khoản chưa được kích hoạt. Vui lòng kiểm tra email hoặc yêu cầu gửi lại link kích hoạt." };
 
             var token = GenerateJwtToken(user);
-            return new LoginResponseVModel { Success = true, Token = token, Role = user.Role, FullName=user.FullName, Message="Đăng nhập thành công" };
+            return new LoginResponseVModel { Success = true, Token = token, Role = user.Role, UserID=user.UserID, FullName=user.FullName, Message="Đăng nhập thành công" };
         }
 
         public async Task<LoginResponseVModel> ActivateAccount(string token)
