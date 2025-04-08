@@ -6,7 +6,7 @@ namespace WebPizza_API_BackEnd.ViewModels.Order
 {
     public class OrderVModel
     {
-        [JsonIgnore] // Ẩn OrderID khi nhận request từ client
+       // [JsonIgnore] // Ẩn OrderID khi nhận request từ client
         public int? OrderID { get; set; }
         public int UserID { get; set; }
         public decimal TotalAmount { get; set; }
