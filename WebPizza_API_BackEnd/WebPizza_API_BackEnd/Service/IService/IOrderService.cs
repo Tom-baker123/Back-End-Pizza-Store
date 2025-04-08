@@ -6,7 +6,7 @@ namespace WebPizza_API_BackEnd.Service.IService
     {
         Task<IEnumerable<OrderVModel>> GetOrdersAsync();
         Task<OrderVModel> GetOrderByIdAsync(int id);
-        Task<OrderVModel> AddOrderAsync(OrderVModel orderVm);
+        Task<OrderVModel> AddOrderAsync(OrderCeateVModel orderVm);
         Task<bool> UpdateOrderAsync(OrderVModel orderVm);
         Task<bool> DeleteOrderAsync(int id);
     }
