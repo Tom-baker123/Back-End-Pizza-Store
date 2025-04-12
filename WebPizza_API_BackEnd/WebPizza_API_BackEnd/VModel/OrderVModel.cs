@@ -8,7 +8,7 @@ namespace WebPizza_API_BackEnd.ViewModels.Order
     {
        // [JsonIgnore] // Ẩn OrderID khi nhận request từ client
         public int? OrderID { get; set; }
-        public int UserID { get; set; }
+        public int? UserID { get; set; }
         public decimal TotalAmount { get; set; }
         public string Status { get; set; }  
         public DateTime OrderDate { get; set; }
@@ -18,7 +18,7 @@ namespace WebPizza_API_BackEnd.ViewModels.Order
     {
         [JsonIgnore] // Ẩn OrderID khi nhận request từ client
         public int? OrderID { get; set; }
-        public int UserID { get; set; }
+        public int? UserID { get; set; }
         public decimal TotalAmount { get; set; }
         public string Status { get; set; }
         public DateTime OrderDate { get; set; }
