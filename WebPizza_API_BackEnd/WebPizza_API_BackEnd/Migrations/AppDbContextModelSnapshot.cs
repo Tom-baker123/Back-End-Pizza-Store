@@ -83,7 +83,7 @@ namespace WebPizza_API_BackEnd.Migrations
                     b.Property<decimal>("TotalAmount")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("UserID")
+                    b.Property<int?>("UserID")
                         .HasColumnType("int");
 
                     b.Property<int?>("VoucherID")
@@ -469,8 +469,7 @@ namespace WebPizza_API_BackEnd.Migrations
                     b.HasOne("WebPizza_API_BackEnd.Entities.User", "User")
                         .WithMany("Orders")
                         .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("WebPizza_API_BackEnd.Entities.Voucher", "Voucher")
                         .WithMany("Orders")

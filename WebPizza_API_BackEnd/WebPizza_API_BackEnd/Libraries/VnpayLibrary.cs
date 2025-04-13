@@ -14,7 +14,7 @@ namespace WebPizza_API_BackEnd.Libraries
         public PaymentResponseModel GetFullResponseData(IQueryCollection collection, string hashSecret)
         {
             var vnPay = new VnpayLibrary();
-            foreach (var (key, value) in collection)
+            foreach (var (key, value) in collection)    
             {
                 if (!string.IsNullOrEmpty(key) && key.StartsWith("vnp_"))
                 {
