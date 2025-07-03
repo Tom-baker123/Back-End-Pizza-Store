@@ -24,13 +24,13 @@ namespace WebPizza_API_BackEnd.Context
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Promotion> Promotions { get; set; }
         public DbSet<ProductPromotion> ProductPromotions { get; set; }
-        
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            // **Cấu hinh bảng ProductSizes (Nhiều-Nhiều giữa Product và Size)**
+            // **Cấu hình bảng ProductSizes (Nhiều-Nhiều giữa Product và Size)**
             modelBuilder.Entity<ProductSize>()
                 .HasKey(ps => new { ps.ProductID, ps.SizeID });
 
@@ -166,7 +166,60 @@ namespace WebPizza_API_BackEnd.Context
                 .WithMany(p => p.Carts)
                 .HasForeignKey(c => c.ProductID)
                 .OnDelete(DeleteBehavior.Cascade);
-           
+
+            // **Cấu hình cho các thuộc tính decimal**
+            // Voucher
+            modelBuilder.Entity<Voucher>()
+                .Property(v => v.MinOrderValue)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<Voucher>()
+                .Property(v => v.Discount)
+                .HasPrecision(18, 2);
+
+            // Order
+            modelBuilder.Entity<Order>()
+                .Property(o => o.TotalAmount)
+                .HasPrecision(18, 2);
+
+            // OrderDetail
+            modelBuilder.Entity<OrderDetail>()
+                .Property(od => od.BasePrice)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<OrderDetail>()
+                .Property(od => od.Subtotal)
+                .HasPrecision(18, 2);
+
+            // OrderTopping
+            modelBuilder.Entity<OrderTopping>()
+                .Property(ot => ot.Price)
+                .HasPrecision(18, 2);
+
+            // PizzaSize
+            modelBuilder.Entity<PizzaSize>()
+                .Property(ps => ps.AdditionalPrice)
+                .HasPrecision(18, 2);
+
+            // Product
+            modelBuilder.Entity<Product>()
+                .Property(p => p.Price)
+                .HasPrecision(18, 2);
+
+            // ProductSize
+            modelBuilder.Entity<ProductSize>()
+                .Property(ps => ps.Price)
+                .HasPrecision(18, 2);
+
+            // Promotion
+            modelBuilder.Entity<Promotion>()
+                .Property(pr => pr.Discount)
+                .HasPrecision(18, 2);
+
+            // Topping
+            modelBuilder.Entity<Topping>()
+                .Property(t => t.Price)
+                .HasPrecision(18, 2);
         }
     }
 }

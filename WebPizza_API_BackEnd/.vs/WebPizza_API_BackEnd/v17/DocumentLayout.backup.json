@@ -1,32 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\migrations\\20250413083724_pizza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\migrations\\20250413083724_pizza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|d:\\github\\back-end-pizza-store\\webpizza_api_backend\\webpizza_api_backend\\service\\orderservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B826A45-0BD9-443C-852E-47917562B911}|WebPizza_API_BackEnd\\WebPizza_API_BackEnd.csproj|solutionrelative:webpizza_api_backend\\service\\orderservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "D:\\5. Workspace\\GithubDesktop\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,80 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20250413083724_Pizza.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Migrations\\20250413083724_Pizza.cs",
-              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Migrations\\20250413083724_Pizza.cs",
-              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Migrations\\20250413083724_Pizza.cs",
-              "RelativeToolTip": "WebPizza_API_BackEnd\\Migrations\\20250413083724_Pizza.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T08:37:24.874Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\appsettings.json",
-              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\appsettings.json",
-              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\appsettings.json*",
-              "RelativeToolTip": "WebPizza_API_BackEnd\\appsettings.json*",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAACcAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-13T08:12:26.483Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\appsettings.Development.json",
-              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\appsettings.Development.json",
-              "RelativeToolTip": "WebPizza_API_BackEnd\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-13T08:10:43.538Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Program.cs",
-              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Program.cs",
-              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Program.cs",
-              "RelativeToolTip": "WebPizza_API_BackEnd\\Program.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T07:40:53.307Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OrderService .cs",
-              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Service\\OrderService .cs",
-              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Service\\OrderService .cs",
-              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Service\\OrderService .cs",
-              "RelativeToolTip": "WebPizza_API_BackEnd\\Service\\OrderService .cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAcwBQAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T09:41:48.233Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Order.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Entities\\Order.cs",
-              "RelativeDocumentMoniker": "WebPizza_API_BackEnd\\Entities\\Order.cs",
-              "ToolTip": "D:\\GITHUB\\Back-End-Pizza-Store\\WebPizza_API_BackEnd\\WebPizza_API_BackEnd\\Entities\\Order.cs",
-              "RelativeToolTip": "WebPizza_API_BackEnd\\Entities\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T09:41:27.758Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }
